@@ -24,10 +24,10 @@ spring:
         serialization.indent_output: true
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:postgresql://localhost:5432/mc437
+        url: jdbc:postgresql://ec2-54-225-112-215.compute-1.amazonaws.com/d4cm4idhq121i3
         name:
-        username: postgres
-        password:
+        username: oandlfvlhtvawq
+        password: cVJBXSlUvnE5VY2EZ1_NnO060l
     jpa:
         database-platform: br.com.conpec.sade.domain.util.FixedPostgreSQL82Dialect
         database: POSTGRESQL
