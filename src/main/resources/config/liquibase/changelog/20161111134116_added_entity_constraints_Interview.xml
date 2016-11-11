@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Interview.
+    -->
+    <changeSet id="20161111134116-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="report_id"
+                                 baseTableName="interview"
+                                 constraintName="fk_interview_report_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="external_resource"/>
+
+        <addForeignKeyConstraint baseColumnNames="interviews_id"
+                                 baseTableName="interview_skills"
+                                 constraintName="fk_interview_skills_interviews_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="interview"/>
+        <addForeignKeyConstraint baseColumnNames="skills_id"
+                                 baseTableName="interview_skills"
+                                 constraintName="fk_interview_skills_skills_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="skill"/>
+        
+        <addForeignKeyConstraint baseColumnNames="interviewer_id"
+                                 baseTableName="interview"
+                                 constraintName="fk_interview_interviewer_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_data"/>
+
+        <addForeignKeyConstraint baseColumnNames="interviewed_id"
+                                 baseTableName="interview"
+                                 constraintName="fk_interview_interviewed_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_data"/>
+
+    </changeSet>
+</databaseChangeLog>

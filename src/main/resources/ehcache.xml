@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
+         name="CM1"
+         updateCheck="false"
+         maxBytesLocalHeap="16M">
+
+    <!--
+      This is a default configuration, it is re-configured by the CacheConfiguration Spring Bean, using the
+      properties from the resources/config/*.yml files.
+    -->
+
+    <diskStore path="java.io.tmpdir"/>
+
+    <defaultCache
+            eternal="false"
+            overflowToDisk="false"
+            />
+
+    <cache name="br.com.conpec.sade.domain.User"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="br.com.conpec.sade.domain.Authority"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="br.com.conpec.sade.domain.User.authorities"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="br.com.conpec.sade.domain.PersistentToken"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="br.com.conpec.sade.domain.User.persistentTokens"
+           timeToLiveSeconds="3600">
+    </cache>
+    
+
+    <cache name="br.com.conpec.sade.social.SocialUserConnection"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="br.com.conpec.sade.domain.UserData"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="br.com.conpec.sade.domain.UserData.feedbacks"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="br.com.conpec.sade.domain.UserData.reviews"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="br.com.conpec.sade.domain.UserData.managings"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="br.com.conpec.sade.domain.UserData.askingInterviews"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="br.com.conpec.sade.domain.UserData.answeringInterviews"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="br.com.conpec.sade.domain.UserData.skills"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="br.com.conpec.sade.domain.UserData.developings"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="br.com.conpec.sade.domain.UserData.assessings"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="br.com.conpec.sade.domain.Interview"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="br.com.conpec.sade.domain.Interview.skills"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="br.com.conpec.sade.domain.Skill"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="br.com.conpec.sade.domain.Feedback"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="br.com.conpec.sade.domain.Project"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="br.com.conpec.sade.domain.Project.resources"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="br.com.conpec.sade.domain.Project.reviews"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="br.com.conpec.sade.domain.Project.developers"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="br.com.conpec.sade.domain.Project.assessors"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="br.com.conpec.sade.domain.ExternalResource"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <!-- jhipster-needle-ehcache-add-entry -->
+</ehcache>

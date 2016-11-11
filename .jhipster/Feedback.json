@@ -1,0 +1,58 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "project",
+            "otherEntityName": "project",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "author",
+            "otherEntityName": "userData",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "developer",
+            "otherEntityName": "userData",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "commitment",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "communication",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "punctuality",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "quality",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "technicalKnowledge",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "bonus",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "extra",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20161111134118",
+    "entityTableName": "feedback",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

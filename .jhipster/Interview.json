@@ -1,0 +1,44 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "report",
+            "otherEntityName": "externalResource",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "interview"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "",
+            "relationshipName": "skills",
+            "otherEntityName": "skill",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "interviewer",
+            "otherEntityName": "userData",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "interviewed",
+            "otherEntityName": "userData",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "date",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20161111134116",
+    "entityTableName": "interview",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

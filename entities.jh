@@ -1,0 +1,68 @@
+enum ProjectStatus {
+    DRAFT, UNDER_DEVELOPMENT, DONE, CANCELLED
+}
+
+entity UserData {
+    primaryPhoneNumber String required,
+    secondaryPhoneNumber String,
+    address String required,
+    rg String required,
+    cpf String required,
+    extra String,
+    available Boolean,
+    availableHoursPerWeek Integer,
+    initialCostPerHour Integer,
+    bankAgency String,
+    bankAccount String
+}
+
+entity Interview {
+    date LocalDate
+}
+
+entity Skill {
+    name String,
+    verified Boolean
+}
+
+entity Feedback {
+    commitment Integer,
+    communication Integer,
+    punctuality Integer,
+    quality Integer,
+    technicalKnowledge Integer,
+    bonus Integer,
+    extra String
+}
+
+entity Project {
+    name String required,
+    status ProjectStatus required
+}
+
+entity ExternalResource {
+    url String required,
+    name String required
+}
+
+relationship OneToOne {
+    UserData{user} to User,
+    Interview{report} to ExternalResource
+}
+
+relationship OneToMany {
+    Project{resources} to ExternalResource,
+    Project{reviews} to Feedback{project},
+    UserData to Feedback{author},
+    UserData{reviews} to Feedback{developer},
+    UserData{managing} to Project{manager},
+    UserData{askingInterviews} to Interview{interviewer},
+    UserData{answeringInterviews} to Interview{interviewed}
+}
+
+relationship ManyToMany {
+    Project{developers} to UserData{developing},
+    Project{assessors} to UserData{assessing},
+    UserData{skills} to Skill,
+    Interview{skills} to Skill
+}

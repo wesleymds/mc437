@@ -1,0 +1,128 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "userData"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "feedback",
+            "otherEntityName": "feedback",
+            "otherEntityRelationshipName": "author"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "reviews",
+            "otherEntityName": "feedback",
+            "otherEntityRelationshipName": "developer"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "managing",
+            "otherEntityName": "project",
+            "otherEntityRelationshipName": "manager"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "askingInterviews",
+            "otherEntityName": "interview",
+            "otherEntityRelationshipName": "interviewer"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "answeringInterviews",
+            "otherEntityName": "interview",
+            "otherEntityRelationshipName": "interviewed"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "",
+            "relationshipName": "skills",
+            "otherEntityName": "skill",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "developing",
+            "otherEntityName": "project",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "developers"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "assessing",
+            "otherEntityName": "project",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "assessors"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "primaryPhoneNumber",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "secondaryPhoneNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "rg",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "cpf",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "extra",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "available",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "availableHoursPerWeek",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "initialCostPerHour",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "bankAgency",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bankAccount",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20161111134115",
+    "entityTableName": "user_data",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

@@ -1,0 +1,73 @@
+
+<div>
+    <h2><span>User Data</span> {{vm.userData.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Primary Phone Number</span></dt>
+        <dd>
+            <span>{{vm.userData.primaryPhoneNumber}}</span>
+        </dd>
+        <dt><span>Secondary Phone Number</span></dt>
+        <dd>
+            <span>{{vm.userData.secondaryPhoneNumber}}</span>
+        </dd>
+        <dt><span>Address</span></dt>
+        <dd>
+            <span>{{vm.userData.address}}</span>
+        </dd>
+        <dt><span>Rg</span></dt>
+        <dd>
+            <span>{{vm.userData.rg}}</span>
+        </dd>
+        <dt><span>Cpf</span></dt>
+        <dd>
+            <span>{{vm.userData.cpf}}</span>
+        </dd>
+        <dt><span>Extra</span></dt>
+        <dd>
+            <span>{{vm.userData.extra}}</span>
+        </dd>
+        <dt><span>Available</span></dt>
+        <dd>
+            <span>{{vm.userData.available}}</span>
+        </dd>
+        <dt><span>Available Hours Per Week</span></dt>
+        <dd>
+            <span>{{vm.userData.availableHoursPerWeek}}</span>
+        </dd>
+        <dt><span>Initial Cost Per Hour</span></dt>
+        <dd>
+            <span>{{vm.userData.initialCostPerHour}}</span>
+        </dd>
+        <dt><span>Bank Agency</span></dt>
+        <dd>
+            <span>{{vm.userData.bankAgency}}</span>
+        </dd>
+        <dt><span>Bank Account</span></dt>
+        <dd>
+            <span>{{vm.userData.bankAccount}}</span>
+        </dd>
+        <dt><span>User</span></dt>
+        <dd>
+            {{vm.userData.user.id}}
+        </dd>
+        <dt><span>Skills</span></dt>
+        <dd>
+            <span ng-repeat="skills in vm.userData.skills">
+                <a ui-sref="skill-detail({id: skills.id})">{{skills.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="user-data-detail.edit({id:vm.userData.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

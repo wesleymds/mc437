@@ -3,15 +3,20 @@ services:
     mc437-app:
         image: mc437
         external_links:
-            - mc437-mongodb:mongodb
+            - mc437-postgresql:postgresql
+            - mc437-elasticsearch:elasticsearch
         environment:
             - SPRING_PROFILES_ACTIVE=prod,swagger
-            - SPRING_DATA_MONGODB_URI=mongodb://mongodb:27017
-            - SPRING_DATA_MONGODB_DATABASE=mc437
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresql:5432/mc437
             - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+            - SPRING_DATA_ELASTICSEARCH_CLUSTER_NODES=elasticsearch:9300
         ports:
             - 8080:8080
-    mc437-mongodb:
+    mc437-postgresql:
         extends:
-            file: mongodb.yml
-            service: mc437-mongodb
+            file: postgresql.yml
+            service: mc437-postgresql
+    mc437-elasticsearch:
+        extends:
+            file: elasticsearch.yml
+            service: mc437-elasticsearch

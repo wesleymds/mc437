@@ -1,0 +1,103 @@
+<div>
+    <h2>User Data</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="user-data.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs" >
+                        Create new User Data
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="Query">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span>ID</span></th>
+                    <th><span>Primary Phone Number</span></th>
+                    <th><span>Secondary Phone Number</span></th>
+                    <th><span>Address</span></th>
+                    <th><span>Rg</span></th>
+                    <th><span>Cpf</span></th>
+                    <th><span>Extra</span></th>
+                    <th><span>Available</span></th>
+                    <th><span>Available Hours Per Week</span></th>
+                    <th><span>Initial Cost Per Hour</span></th>
+                    <th><span>Bank Agency</span></th>
+                    <th><span>Bank Account</span></th>
+                    <th><span>User</span></th>
+                    <th><span>Skills</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="userData in vm.userData track by userData.id">
+                    <td><a ui-sref="user-data-detail({id:userData.id})">{{userData.id}}</a></td>
+                    <td>{{userData.primaryPhoneNumber}}</td>
+                    <td>{{userData.secondaryPhoneNumber}}</td>
+                    <td>{{userData.address}}</td>
+                    <td>{{userData.rg}}</td>
+                    <td>{{userData.cpf}}</td>
+                    <td>{{userData.extra}}</td>
+                    <td>{{userData.available}}</td>
+                    <td>{{userData.availableHoursPerWeek}}</td>
+                    <td>{{userData.initialCostPerHour}}</td>
+                    <td>{{userData.bankAgency}}</td>
+                    <td>{{userData.bankAccount}}</td>
+                    <td>
+                        {{userData.user.id}}
+                    </td>
+                    <td>
+                        <span ng-repeat="skills in userData.skills">
+                            <a class="form-control-static" ui-sref="skill-detail({id: skills.id})">{{skills.id}}</a>{{$last ? '' : ', '}}
+                        </span>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="user-data-detail({id:userData.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="user-data.edit({id:userData.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="user-data.delete({id:userData.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

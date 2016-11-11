@@ -17,10 +17,25 @@ spring:
             enabled: false
         livereload:
             enabled: false
+    datasource:
+        type: com.zaxxer.hikari.HikariDataSource
+        url: jdbc:postgresql://localhost:5432/mc437
+        name:
+        username: postgres
+        password:
+    jpa:
+        database-platform: br.com.conpec.sade.domain.util.FixedPostgreSQL82Dialect
+        database: POSTGRESQL
+        show-sql: false
+        properties:
+            hibernate.cache.use_second_level_cache: true
+            hibernate.cache.use_query_cache: false
+            hibernate.generate_statistics: false
+            hibernate.cache.region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
     data:
-        mongodb:
-            uri: mongodb://localhost:27017
-            database: mc437
+        elasticsearch:
+            cluster-name:
+            cluster-nodes: localhost:9300
     mail:
         host: localhost
         port: 25
@@ -28,6 +43,9 @@ spring:
         password:
     thymeleaf:
         cache: true
+
+liquibase:
+    contexts: prod
 
 server:
     port: 8080
@@ -44,10 +62,13 @@ jhipster:
     http:
         cache: # Used by the CachingHttpHeadersFilter
             timeToLiveInDays: 1461
+    cache: # Hibernate 2nd level cache, used by CacheConfiguration
+        ehcache:
+            maxBytesLocalHeap: 256M
     security:
         rememberMe:
             # security key (this key should be unique for your application, and kept secret)
-            key: 95da46a38115c233def46d3d5ad88961c60576ae
+            key: da2426c638a65cb8c5fa499c4041acc9200066f6
     mail: # specific JHipster mail property, for standard properties see MailProperties
         from: mc437@localhost
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration

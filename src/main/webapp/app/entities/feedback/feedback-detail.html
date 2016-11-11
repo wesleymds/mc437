@@ -1,0 +1,59 @@
+
+<div>
+    <h2><span>Feedback</span> {{vm.feedback.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Commitment</span></dt>
+        <dd>
+            <span>{{vm.feedback.commitment}}</span>
+        </dd>
+        <dt><span>Communication</span></dt>
+        <dd>
+            <span>{{vm.feedback.communication}}</span>
+        </dd>
+        <dt><span>Punctuality</span></dt>
+        <dd>
+            <span>{{vm.feedback.punctuality}}</span>
+        </dd>
+        <dt><span>Quality</span></dt>
+        <dd>
+            <span>{{vm.feedback.quality}}</span>
+        </dd>
+        <dt><span>Technical Knowledge</span></dt>
+        <dd>
+            <span>{{vm.feedback.technicalKnowledge}}</span>
+        </dd>
+        <dt><span>Bonus</span></dt>
+        <dd>
+            <span>{{vm.feedback.bonus}}</span>
+        </dd>
+        <dt><span>Extra</span></dt>
+        <dd>
+            <span>{{vm.feedback.extra}}</span>
+        </dd>
+        <dt><span>Project</span></dt>
+        <dd>
+            <a ui-sref="project-detail({id:vm.feedback.project.id})">{{vm.feedback.project.id}}</a>
+        </dd>
+        <dt><span>Author</span></dt>
+        <dd>
+            <a ui-sref="user-data-detail({id:vm.feedback.author.id})">{{vm.feedback.author.id}}</a>
+        </dd>
+        <dt><span>Developer</span></dt>
+        <dd>
+            <a ui-sref="user-data-detail({id:vm.feedback.developer.id})">{{vm.feedback.developer.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="feedback-detail.edit({id:vm.feedback.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,86 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myFeedbackLabel">Create or edit a Feedback</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.feedback.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.feedback.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_commitment">Commitment</label>
+            <input type="number" class="form-control" name="commitment" id="field_commitment"
+                    ng-model="vm.feedback.commitment"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_communication">Communication</label>
+            <input type="number" class="form-control" name="communication" id="field_communication"
+                    ng-model="vm.feedback.communication"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_punctuality">Punctuality</label>
+            <input type="number" class="form-control" name="punctuality" id="field_punctuality"
+                    ng-model="vm.feedback.punctuality"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_quality">Quality</label>
+            <input type="number" class="form-control" name="quality" id="field_quality"
+                    ng-model="vm.feedback.quality"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_technicalKnowledge">Technical Knowledge</label>
+            <input type="number" class="form-control" name="technicalKnowledge" id="field_technicalKnowledge"
+                    ng-model="vm.feedback.technicalKnowledge"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_bonus">Bonus</label>
+            <input type="number" class="form-control" name="bonus" id="field_bonus"
+                    ng-model="vm.feedback.bonus"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_extra">Extra</label>
+            <input type="text" class="form-control" name="extra" id="field_extra"
+                    ng-model="vm.feedback.extra"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label for="field_project">Project</label>
+            <select class="form-control" id="field_project" name="project" ng-model="vm.feedback.project" ng-options="project as project.id for project in vm.projects track by project.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_author">Author</label>
+            <select class="form-control" id="field_author" name="author" ng-model="vm.feedback.author" ng-options="userData as userData.id for userData in vm.userdata track by userData.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_developer">Developer</label>
+            <select class="form-control" id="field_developer" name="developer" ng-model="vm.feedback.developer" ng-options="userData as userData.id for userData in vm.userdata track by userData.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

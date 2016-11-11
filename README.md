@@ -1,6 +1,6 @@
 # mc437
 
-This application was generated using JHipster 3.9.1, you can find documentation and help at [https://jhipster.github.io/documentation-archive/v3.9.1](https://jhipster.github.io/documentation-archive/v3.9.1).
+This application was generated using JHipster 3.10.0, you can find documentation and help at [https://jhipster.github.io/documentation-archive/v3.10.0](https://jhipster.github.io/documentation-archive/v3.10.0).
 
 ## Development
 
@@ -64,13 +64,13 @@ For more information, refer to the [Running tests page][].
 ## Using Docker to simplify development (optional)
 
 You can use Docker to improve your JHipster development experience. A number of docker-compose configuration are available in the `src/main/docker` folder to launch required third party services.
-For example, to start a mongodb database in a docker container, run:
+For example, to start a postgresql database in a docker container, run:
 
-    docker-compose -f src/main/docker/mongodb.yml up -d
+    docker-compose -f src/main/docker/postgresql.yml up -d
 
 To stop it and remove the container, run:
 
-    docker-compose -f src/main/docker/mongodb.yml down
+    docker-compose -f src/main/docker/postgresql.yml down
 
 You can also fully dockerize your application and all the services that it depends on.
 To achieve this, first build a docker image of your app by running:
@@ -88,13 +88,13 @@ For more information refer to [Using Docker and Docker-Compose][], this page als
 To set up a CI environment, consult the [Setting up Continuous Integration][] page.
 
 [JHipster Homepage and latest documentation]: https://jhipster.github.io
-[JHipster 3.9.1 archive]: https://jhipster.github.io/documentation-archive/v3.9.1
+[JHipster 3.10.0 archive]: https://jhipster.github.io/documentation-archive/v3.10.0
 
-[Using JHipster in development]: https://jhipster.github.io/documentation-archive/v3.9.1/development/
-[Using Docker and Docker-Compose]: https://jhipster.github.io/documentation-archive/v3.9.1/docker-compose
-[Using JHipster in production]: https://jhipster.github.io/documentation-archive/v3.9.1/production/
-[Running tests page]: https://jhipster.github.io/documentation-archive/v3.9.1/running-tests/
-[Setting up Continuous Integration]: https://jhipster.github.io/documentation-archive/v3.9.1/setting-up-ci/
+[Using JHipster in development]: https://jhipster.github.io/documentation-archive/v3.10.0/development/
+[Using Docker and Docker-Compose]: https://jhipster.github.io/documentation-archive/v3.10.0/docker-compose
+[Using JHipster in production]: https://jhipster.github.io/documentation-archive/v3.10.0/production/
+[Running tests page]: https://jhipster.github.io/documentation-archive/v3.10.0/running-tests/
+[Setting up Continuous Integration]: https://jhipster.github.io/documentation-archive/v3.10.0/setting-up-ci/
 
 
 [Node.js]: https://nodejs.org/

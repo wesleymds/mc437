@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Project.
+    -->
+    <changeSet id="20161111134119-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="projects_id"
+                                 baseTableName="project_developers"
+                                 constraintName="fk_project_developers_projects_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="project"/>
+        <addForeignKeyConstraint baseColumnNames="developers_id"
+                                 baseTableName="project_developers"
+                                 constraintName="fk_project_developers_developers_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_data"/>
+        
+        <addForeignKeyConstraint baseColumnNames="projects_id"
+                                 baseTableName="project_assessors"
+                                 constraintName="fk_project_assessors_projects_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="project"/>
+        <addForeignKeyConstraint baseColumnNames="assessors_id"
+                                 baseTableName="project_assessors"
+                                 constraintName="fk_project_assessors_assessors_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_data"/>
+        
+        <addForeignKeyConstraint baseColumnNames="manager_id"
+                                 baseTableName="project"
+                                 constraintName="fk_project_manager_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_data"/>
+
+    </changeSet>
+</databaseChangeLog>
