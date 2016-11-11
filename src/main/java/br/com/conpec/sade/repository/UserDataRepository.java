@@ -19,4 +19,9 @@ public interface UserDataRepository extends JpaRepository<UserData,Long> {
     @Query("select userData from UserData userData left join fetch userData.skills where userData.id =:id")
     UserData findOneWithEagerRelationships(@Param("id") Long id);
 
+    @Query("select ud from UserData ud left join fetch ud.skills" +
+        " where (lower(ud.user.firstName) in :names or lower(ud.user.lastName) similar to :namePattern)")
+    List<UserData> searchWithEagerRelationships(@Param("namePattern") String namePattern,
+                                                @Param("available") Boolean available);
+
 }

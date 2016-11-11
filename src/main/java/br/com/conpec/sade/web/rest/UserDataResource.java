@@ -32,7 +32,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 public class UserDataResource {
 
     private final Logger log = LoggerFactory.getLogger(UserDataResource.class);
-        
+
     @Inject
     private UserDataRepository userDataRepository;
 
@@ -133,7 +133,7 @@ public class UserDataResource {
      * SEARCH  /_search/user-data?query=:query : search for the userData corresponding
      * to the query.
      *
-     * @param query the query of the userData search 
+     * @param query the query of the userData search
      * @return the result of the search
      */
     @GetMapping("/_search/user-data")
@@ -145,5 +145,11 @@ public class UserDataResource {
             .collect(Collectors.toList());
     }
 
+    @GetMapping("/user-data/search")
+    @Timed
+    public List<UserData> queryUserData(@RequestParam String name) {
+        log.debug("Request to search UserData for name {}", name);
+        return userDataRepository.searchWithEagerRelationships(name);
+    }
 
 }

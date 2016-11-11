@@ -21,7 +21,7 @@ entity Interview {
 }
 
 entity Skill {
-    name String,
+    name String unique,
     verified Boolean
 }
 
