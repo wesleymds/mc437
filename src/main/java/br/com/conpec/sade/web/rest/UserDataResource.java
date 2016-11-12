@@ -1,6 +1,7 @@
 package br.com.conpec.sade.web.rest;
 
 import br.com.conpec.sade.service.UserSearchService;
+import br.com.conpec.sade.web.rest.vm.UserSearchResultVM;
 import com.codahale.metrics.annotation.Timed;
 import br.com.conpec.sade.domain.UserData;
 
@@ -151,12 +152,17 @@ public class UserDataResource {
 
     @GetMapping("/user-data/search")
     @Timed
-    public List<UserData> queryUserData(@RequestParam(required = false) String name,
-                                        @RequestParam(required = false) List<String> skills,
-                                        @RequestParam(required = false) Boolean available) {
+    public List<UserSearchResultVM> queryUserData(@RequestParam(required = false) String name,
+                                                  @RequestParam(required = false) List<String> skills,
+                                                  @RequestParam(required = false) Boolean available,
+                                                  @RequestParam(required = false) Integer minAvailableHours,
+                                                  @RequestParam(required = false) Integer maxCostPerHour) {
 
         log.debug("Request to search UserData for name {}", name);
-        return userSearchService.search(name, skills, available);
+        return userSearchService.search(name, skills, available, minAvailableHours, maxCostPerHour)
+            .stream()
+            .map(UserSearchResultVM::new)
+            .collect(Collectors.toList());
     }
 
 }

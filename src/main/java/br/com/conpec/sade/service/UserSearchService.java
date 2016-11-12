@@ -23,20 +23,22 @@ public class UserSearchService {
 
     public List<UserData> search(final String name,
                                  final List<String> skills,
-                                 final Boolean available) {
+                                 final Boolean available,
+                                 final Integer minAvailableHours,
+                                 final Integer maxCostPerHour) {
 
-        final String dummy = "";
+        final Set<String> dummyQuery = Sets.newHashSet("*");
 
         final List<String> namesList = Optional.ofNullable(name)
             .map(s -> s.split("\\s"))
             .map(Arrays::stream)
-            .orElseGet(() -> Sets.newHashSet(dummy).stream())
+            .orElseGet(dummyQuery::stream)
             .map(String::toLowerCase)
             .collect(Collectors.toList());
 
         final List<String> skillsList = Optional.ofNullable(skills)
             .map(Collection::stream)
-            .orElseGet(() -> Sets.newHashSet(dummy).stream())
+            .orElseGet(dummyQuery::stream)
             .map(String::trim)
             .map(String::toLowerCase)
             .filter(s -> !Strings.isNullOrEmpty(s))
@@ -44,22 +46,25 @@ public class UserSearchService {
 
         return userDataRepository.searchWithEagerRelationships(
             // searchByName
-            namesList.isEmpty(),
+            namesList.equals(dummyQuery),
 
             // namePattern
             namesList,
 
             // searchBySkills
-            skillsList.isEmpty(),
+            skillsList.equals(dummyQuery),
 
             // skills
             skillsList,
 
-            // searchByAvailability
-            available != null,
-
             // available
-            available
+            available,
+
+            // minAvailableHours
+            minAvailableHours,
+
+            // maxCostPerHour
+            maxCostPerHour
         );
     }
 }
