@@ -28,6 +28,7 @@ spring:
         name:
         username: oandlfvlhtvawq
         password: cVJBXSlUvnE5VY2EZ1_NnO060l
+        hikari.maximum-pool-size: 3
     jpa:
         database-platform: br.com.conpec.sade.domain.util.FixedPostgreSQL82Dialect
         database: POSTGRESQL
