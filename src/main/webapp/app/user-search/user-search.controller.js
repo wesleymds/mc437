@@ -14,7 +14,10 @@
         vm.isAuthenticated = null;
         vm.result = "";
         vm.login = LoginService.open;
-        vm.searchQuery = {};
+        vm.searchQuery = {
+            minAvailableHours: 10,
+            maxCostPerHour: 20
+        };
         vm.disponibilities = [
             {
                 value: "true",
@@ -29,11 +32,11 @@
             getAccount();
         });
 
-        $scope.searchDevs = () => {
-            UserSearch.search(vm.searchQuery).then((response) => {
+        $scope.searchDevs = function () {
+            UserSearch.search(vm.searchQuery).then(function (response) {
                 vm.result = response.data;
             });
-        }
+        };
 
         getAccount();
 

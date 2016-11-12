@@ -14,6 +14,10 @@ import java.util.stream.Stream;
 @Service
 public class UserSearchService {
 
+    private final String DUMMY_STRING = "*";
+
+    private final Set<String> DUMMY_QUERY = Sets.newHashSet(DUMMY_STRING);
+
     private UserDataRepository userDataRepository;
 
     @Inject
@@ -22,40 +26,58 @@ public class UserSearchService {
     }
 
     public List<UserData> search(final String name,
-                                 final List<String> skills,
+                                 final String skills,
                                  final Boolean available,
                                  final Integer minAvailableHours,
                                  final Integer maxCostPerHour) {
 
-        final Set<String> dummyQuery = Sets.newHashSet("*");
-
-        final List<String> namesList = Optional.ofNullable(name)
+        final Set<String> skillsSet = Optional.ofNullable(skills)
             .map(s -> s.split("\\s"))
             .map(Arrays::stream)
-            .orElseGet(dummyQuery::stream)
+            .orElseGet(Stream::empty)
             .map(String::toLowerCase)
-            .collect(Collectors.toList());
+            .collect(Collectors.toSet());
 
-        final List<String> skillsList = Optional.ofNullable(skills)
+        return search(name, skillsSet, available, minAvailableHours, maxCostPerHour);
+    }
+
+    public List<UserData> search(final String name,
+                                 final Set<String> skills,
+                                 final Boolean available,
+                                 final Integer minAvailableHours,
+                                 final Integer maxCostPerHour) {
+
+        final Set<String> namesSet = Optional.ofNullable(name)
+            .map(s -> s.isEmpty() ? DUMMY_STRING : s)
+            .map(s -> s.split("\\s"))
+            .map(Arrays::stream)
+            .orElseGet(DUMMY_QUERY::stream)
+            .map(String::toLowerCase)
+            .map(s -> s.isEmpty() ? DUMMY_STRING : s)
+            .collect(Collectors.toSet());
+
+        final Set<String> skillsSet = Optional.ofNullable(skills)
+            .map(s -> s.isEmpty() ? DUMMY_QUERY : s)
             .map(Collection::stream)
-            .orElseGet(dummyQuery::stream)
+            .orElseGet(DUMMY_QUERY::stream)
             .map(String::trim)
             .map(String::toLowerCase)
+            .map(s -> s.isEmpty() ? DUMMY_STRING : s)
             .filter(s -> !Strings.isNullOrEmpty(s))
-            .collect(Collectors.toList());
+            .collect(Collectors.toSet());
 
         return userDataRepository.searchWithEagerRelationships(
             // searchByName
-            namesList.equals(dummyQuery),
+            !namesSet.equals(DUMMY_QUERY),
 
             // namePattern
-            namesList,
+            namesSet,
 
             // searchBySkills
-            skillsList.equals(dummyQuery),
+            !skillsSet.equals(DUMMY_QUERY),
 
             // skills
-            skillsList,
+            skillsSet,
 
             // available
             available,

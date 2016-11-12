@@ -153,7 +153,7 @@ public class UserDataResource {
     @GetMapping("/user-data/search")
     @Timed
     public List<UserSearchResultVM> queryUserData(@RequestParam(required = false) String name,
-                                                  @RequestParam(required = false) List<String> skills,
+                                                  @RequestParam(required = false) String skills,
                                                   @RequestParam(required = false) Boolean available,
                                                   @RequestParam(required = false) Integer minAvailableHours,
                                                   @RequestParam(required = false) Integer maxCostPerHour) {
