@@ -1,5 +1,7 @@
 package br.com.conpec.sade.web.rest;
 
+import br.com.conpec.sade.service.UserSearchService;
+import br.com.conpec.sade.web.rest.vm.UserSearchResultVM;
 import com.codahale.metrics.annotation.Timed;
 import br.com.conpec.sade.domain.UserData;
 
@@ -32,12 +34,15 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 public class UserDataResource {
 
     private final Logger log = LoggerFactory.getLogger(UserDataResource.class);
-        
+
     @Inject
     private UserDataRepository userDataRepository;
 
     @Inject
     private UserDataSearchRepository userDataSearchRepository;
+
+    @Inject
+    private UserSearchService userSearchService;
 
     /**
      * POST  /user-data : Create a new userData.
@@ -133,7 +138,7 @@ public class UserDataResource {
      * SEARCH  /_search/user-data?query=:query : search for the userData corresponding
      * to the query.
      *
-     * @param query the query of the userData search 
+     * @param query the query of the userData search
      * @return the result of the search
      */
     @GetMapping("/_search/user-data")
@@ -145,5 +150,19 @@ public class UserDataResource {
             .collect(Collectors.toList());
     }
 
+    @GetMapping("/user-data/search")
+    @Timed
+    public List<UserSearchResultVM> queryUserData(@RequestParam(required = false) String name,
+                                                  @RequestParam(required = false) String skills,
+                                                  @RequestParam(required = false) Boolean available,
+                                                  @RequestParam(required = false) Integer minAvailableHours,
+                                                  @RequestParam(required = false) Integer maxCostPerHour) {
+
+        log.debug("Request to search UserData for name {}", name);
+        return userSearchService.search(name, skills, available, minAvailableHours, maxCostPerHour)
+            .stream()
+            .map(UserSearchResultVM::new)
+            .collect(Collectors.toList());
+    }
 
 }

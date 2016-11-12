@@ -1,0 +1,1781 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>br.com.conpec.sade</OriginalElement>
+  <nodes>
+    <node x="6817.190027480544" y="209.0">br.com.conpec.sade.config.JHipsterProperties.Http.Cache</node>
+    <node x="5623.887754753272" y="0.0">br.com.conpec.sade.domain.Authority</node>
+    <node x="6520.190027480544" y="209.0">br.com.conpec.sade.config.JHipsterProperties.Metrics.Graphite</node>
+    <node x="4012.5665426320584" y="1135.0">br.com.conpec.sade.security.SecurityUtils</node>
+    <node x="5836.282116908207" y="438.0">br.com.conpec.sade.domain.PersistentToken</node>
+    <node x="986.0" y="1683.0">br.com.conpec.sade.config.ThymeleafConfiguration</node>
+    <node x="773.5816941472099" y="1135.0">br.com.conpec.sade.repository.ExternalResourceRepository</node>
+    <node x="7666.340598370655" y="209.0">br.com.conpec.sade.config.CloudDatabaseConfiguration</node>
+    <node x="6711.190027480544" y="438.0">br.com.conpec.sade.config.JHipsterProperties.Logging</node>
+    <node x="7510.340598370655" y="209.0">br.com.conpec.sade.config.JHipsterProperties.Security.RememberMe</node>
+    <node x="2939.287243392299" y="1334.0">br.com.conpec.sade.service.AuditEventService</node>
+    <node x="930.7581206987502" y="1583.0">br.com.conpec.sade.web.rest.ExternalResourceResource</node>
+    <node x="802.0" y="1762.0">br.com.conpec.sade.web.rest.LogsResource</node>
+    <node x="7738.344045337687" y="757.0">br.com.conpec.sade.config.JHipsterProperties</node>
+    <node x="6479.322514638145" y="438.0">br.com.conpec.sade.config.JHipsterProperties.Metrics</node>
+    <node x="2984.6331206987506" y="1583.0">br.com.conpec.sade.web.rest.AuditResource</node>
+    <node x="2399.174787365417" y="1583.0">br.com.conpec.sade.web.rest.SkillResource</node>
+    <node x="7704.844045337687" y="438.0">br.com.conpec.sade.config.JHipsterProperties.Async</node>
+    <node x="1993.915027480543" y="757.0">br.com.conpec.sade.repository.search.UserDataSearchRepository</node>
+    <node x="6228.190027480544" y="1135.0">br.com.conpec.sade.service.mapper.UserMapper</node>
+    <node x="2496.165027480543" y="438.0">br.com.conpec.sade.repository.search.SkillSearchRepository</node>
+    <node x="1681.4247873654172" y="1583.0">br.com.conpec.sade.web.rest.InterviewResource</node>
+    <node x="20.0" y="209.0">br.com.conpec.sade.domain.SocialUserConnection</node>
+    <node x="1660.770833333334" y="1135.0">br.com.conpec.sade.domain.Interview</node>
+    <node x="6822.190027480544" y="438.0">br.com.conpec.sade.config.JHipsterProperties.Http</node>
+    <node x="1057.9548002078154" y="438.0">br.com.conpec.sade.domain.enumeration.ProjectStatus</node>
+    <node x="2689.790027480543" y="1334.0">br.com.conpec.sade.repository.CustomAuditEventRepository</node>
+    <node x="2123.415027480543" y="1135.0">br.com.conpec.sade.repository.UserDataRepository</node>
+    <node x="6357.190027480544" y="209.0">br.com.conpec.sade.config.JHipsterProperties.Metrics.Jmx</node>
+    <node x="8753.502544824314" y="438.0">br.com.conpec.sade.config.JHipsterProperties.Ribbon</node>
+    <node x="196.74642857142857" y="1683.0">br.com.conpec.sade.web.rest.errors.ParameterizedErrorVM</node>
+    <node x="6625.190027480544" y="209.0">br.com.conpec.sade.config.JHipsterProperties.Metrics.Logs</node>
+    <node x="3472.2900274805434" y="1334.0">br.com.conpec.sade.web.rest.SocialController</node>
+    <node x="8275.986431703988" y="926.0">br.com.conpec.sade.config.apidoc.SwaggerConfiguration</node>
+    <node x="2350.165027480543" y="438.0">br.com.conpec.sade.repository.SkillRepository</node>
+    <node x="13.632887331692473" y="926.0">br.com.conpec.sade.repository.CustomSocialUsersConnectionRepository</node>
+    <node x="2091.9247873654176" y="1583.0">br.com.conpec.sade.web.rest.UserDataResource</node>
+    <node x="3003.2900274805434" y="1135.0">br.com.conpec.sade.repository.PersistenceAuditEventRepository</node>
+    <node x="5701.1321169082075" y="1334.0">br.com.conpec.sade.security.CustomPersistentRememberMeServices</node>
+    <node x="7063.768761246778" y="1334.0">br.com.conpec.sade.web.rest.vm.KeyAndPasswordVM</node>
+    <node x="7486.986431703988" y="926.0">br.com.conpec.sade.config.MetricsConfiguration.SparkRegistry</node>
+    <node x="8135.742157495288" y="1135.0">br.com.conpec.sade.config.WebConfigurer</node>
+    <node x="3662.0400274805434" y="1135.0">br.com.conpec.sade.security.UserDetailsService</node>
+    <node x="8341.377056703988" y="438.0">br.com.conpec.sade.config.DatabaseConfiguration</node>
+    <node x="8736.127056703988" y="926.0">br.com.conpec.sade.config.AsyncConfiguration</node>
+    <node x="7643.992157495288" y="1135.0">br.com.conpec.sade.config.CacheConfiguration</node>
+    <node x="368.0" y="1762.0">br.com.conpec.sade.web.rest.errors.ErrorConstants</node>
+    <node x="1215.0" y="1683.0">br.com.conpec.sade.config.ElasticSearchConfiguration</node>
+    <node x="6913.690027480544" y="438.0">br.com.conpec.sade.config.JHipsterProperties.Cache</node>
+    <node x="3262.2900274805434" y="926.0">br.com.conpec.sade.repository.AuthorityRepository</node>
+    <node x="8064.986431703988" y="926.0">br.com.conpec.sade.config.LoggingConfiguration</node>
+    <node x="1664.352527480543" y="438.0">br.com.conpec.sade.domain.UserData</node>
+    <node x="8416.127056703988" y="209.0">br.com.conpec.sade.config.liquibase.AsyncSpringLiquibase</node>
+    <node x="15.0" y="1762.0">br.com.conpec.sade.web.rest.errors.ErrorVM</node>
+    <node x="2590.165027480543" y="757.0">br.com.conpec.sade.web.rest.vm.UserSearchResultVM</node>
+    <node x="1124.227527480543" y="757.0">br.com.conpec.sade.domain.Project</node>
+    <node x="9148.627056703988" y="209.0">br.com.conpec.sade.aop.logging.LoggingAspect</node>
+    <node x="7900.340598370655" y="209.0">br.com.conpec.sade.config.apidoc.PageableParameterBuilderPlugin</node>
+    <node x="1146.7994971775124" y="209.0">br.com.conpec.sade.domain.Feedback</node>
+    <node x="4913.021378274509" y="1334.0">br.com.conpec.sade.security.SpringSecurityAuditorAware</node>
+    <node x="2788.402314845959" y="926.0">br.com.conpec.sade.domain.PersistentAuditEvent</node>
+    <node x="177.13288733169247" y="438.0">br.com.conpec.sade.repository.SocialUserConnectionRepository</node>
+    <node x="4191.938935090026" y="926.0">br.com.conpec.sade.security.AuthoritiesConstants</node>
+    <node x="619.1328873316929" y="438.0">br.com.conpec.sade.repository.search.FeedbackSearchRepository</node>
+    <node x="27.632887331692473" y="757.0">br.com.conpec.sade.repository.CustomSocialConnectionRepository</node>
+    <node x="568.5" y="1762.0">br.com.conpec.sade.config.LocaleConfiguration</node>
+    <node x="539.0" y="1683.0">br.com.conpec.sade.config.locale.AngularCookieLocaleResolver</node>
+    <node x="3481.7900274805434" y="1135.0">br.com.conpec.sade.service.SocialService</node>
+    <node x="9262.127056703988" y="926.0">br.com.conpec.sade.Mc437App</node>
+    <node x="6223.914015151517" y="926.0">br.com.conpec.sade.service.dto.UserDTO</node>
+    <node x="7645.986431703988" y="926.0">br.com.conpec.sade.config.MetricsConfiguration</node>
+    <node x="6708.190027480544" y="209.0">br.com.conpec.sade.config.JHipsterProperties.Logging.Logstash</node>
+    <node x="115.99999999999999" y="1762.0">br.com.conpec.sade.web.rest.errors.CustomParameterizedException</node>
+    <node x="9088.127056703988" y="438.0">br.com.conpec.sade.config.LoggingAspectConfiguration</node>
+    <node x="7830.986431703988" y="926.0">br.com.conpec.sade.web.filter.CachingHttpHeadersFilter</node>
+    <node x="7310.986431703988" y="926.0">br.com.conpec.sade.config.MetricsConfiguration.GraphiteRegistry</node>
+    <node x="1461.0" y="1683.0">br.com.conpec.sade.domain.util.FixedPostgreSQL82Dialect</node>
+    <node x="4199.899875965391" y="1334.0">br.com.conpec.sade.service.UserService</node>
+    <node x="4964.171254239899" y="926.0">br.com.conpec.sade.security.AjaxAuthenticationFailureHandler</node>
+    <node x="2822.290027480543" y="1135.0">br.com.conpec.sade.config.audit.AuditEventConverter</node>
+    <node x="1569.915027480543" y="1334.0">br.com.conpec.sade.repository.InterviewRepository</node>
+    <node x="5398.887754753272" y="0.0">br.com.conpec.sade.domain.AbstractAuditingEntity</node>
+    <node x="6907.190027480544" y="209.0">br.com.conpec.sade.config.JHipsterProperties.Cache.Ehcache</node>
+    <node x="7423.340598370654" y="438.0">br.com.conpec.sade.config.JHipsterProperties.Swagger</node>
+    <node x="4469.171254239899" y="926.0">br.com.conpec.sade.security.AjaxLogoutSuccessHandler</node>
+    <node x="8648.377056703988" y="757.0">br.com.conpec.sade.async.ExceptionHandlingAsyncTaskExecutor</node>
+    <node x="4044.9389350900256" y="926.0">br.com.conpec.sade.repository.UserRepository</node>
+    <node x="0.0" y="1683.0">br.com.conpec.sade.web.rest.errors.FieldErrorVM</node>
+    <node x="220.06209797147676" y="1135.0">br.com.conpec.sade.config.social.SocialConfiguration</node>
+    <node x="980.5208333333339" y="926.0">br.com.conpec.sade.domain.ExternalResource</node>
+    <node x="6071.076391116907" y="926.0">br.com.conpec.sade.service.MailService</node>
+    <node x="5501.171254239899" y="1135.0">br.com.conpec.sade.web.rest.vm.ManagedUserVM</node>
+    <node x="1365.915027480543" y="926.0">br.com.conpec.sade.repository.search.ProjectSearchRepository</node>
+    <node x="9241.627056703988" y="757.0">br.com.conpec.sade.config.DefaultProfileUtil</node>
+    <node x="3553.1233608138764" y="926.0">br.com.conpec.sade.security.UserNotActivatedException</node>
+    <node x="4692.171254239899" y="926.0">br.com.conpec.sade.security.AjaxAuthenticationSuccessHandler</node>
+    <node x="1001.5816941472099" y="1135.0">br.com.conpec.sade.repository.search.ExternalResourceSearchRepository</node>
+    <node x="4850.708878274509" y="1135.0">br.com.conpec.sade.config.SecurityConfiguration</node>
+    <node x="501.3120979714772" y="1583.0">br.com.conpec.sade.web.rest.FeedbackResource</node>
+    <node x="4143.566542632058" y="1135.0">br.com.conpec.sade.service.util.RandomUtil</node>
+    <node x="1203.915027480543" y="926.0">br.com.conpec.sade.repository.ProjectRepository</node>
+    <node x="814.5" y="1683.0">br.com.conpec.sade.web.rest.vm.LoggerVM</node>
+    <node x="8538.377056703988" y="438.0">br.com.conpec.sade.config.JHipsterProperties.Social</node>
+    <node x="1746.915027480543" y="1334.0">br.com.conpec.sade.repository.search.InterviewSearchRepository</node>
+    <node x="5656.171254239899" y="1135.0">br.com.conpec.sade.repository.PersistentTokenRepository</node>
+    <node x="2173.165027480543" y="1334.0">br.com.conpec.sade.service.UserSearchService</node>
+    <node x="5248.171254239899" y="926.0">br.com.conpec.sade.security.Http401UnauthorizedEntryPoint</node>
+    <node x="1405.9247873654172" y="1583.0">br.com.conpec.sade.web.rest.ProjectResource</node>
+    <node x="3159.6331206987506" y="1334.0">br.com.conpec.sade.web.rest.util.PaginationUtil</node>
+    <node x="8913.127056703988" y="926.0">br.com.conpec.sade.web.rest.ProfileInfoResource</node>
+    <node x="5562.212754753271" y="209.0">br.com.conpec.sade.domain.User</node>
+    <node x="152.5" y="1841.0">br.com.conpec.sade.web.rest.errors.ExceptionTranslator</node>
+    <node x="3778.1233608138764" y="926.0">br.com.conpec.sade.repository.search.UserSearchRepository</node>
+    <node x="2343.637249702765" y="209.0">br.com.conpec.sade.domain.Skill</node>
+    <node x="1983.915027480543" y="1334.0">br.com.conpec.sade.web.rest.util.HeaderUtil</node>
+    <node x="1703.0" y="1683.0">br.com.conpec.sade.domain.util.FixedH2Dialect</node>
+    <node x="441.1328873316925" y="438.0">br.com.conpec.sade.repository.FeedbackRepository</node>
+    <node x="7091.923931703988" y="926.0">br.com.conpec.sade.security.social.CustomSignInAdapter</node>
+    <node x="8052.219045337687" y="0.0">br.com.conpec.sade.config.Constants</node>
+    <node x="5828.208878274509" y="1583.0">br.com.conpec.sade.web.rest.AccountResource</node>
+    <node x="3953.947514638145" y="1583.0">br.com.conpec.sade.web.rest.UserResource</node>
+    <node x="9297.877056703988" y="1135.0">br.com.conpec.sade.ApplicationWebXml</node>
+    <node x="7794.844045337687" y="438.0">br.com.conpec.sade.config.JHipsterProperties.Mail</node>
+    <node x="7527.340598370655" y="438.0">br.com.conpec.sade.config.JHipsterProperties.Security</node>
+    <node x="6433.190027480544" y="209.0">br.com.conpec.sade.config.JHipsterProperties.Metrics.Spark</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="br.com.conpec.sade.web.rest.ExternalResourceResource" target="br.com.conpec.sade.repository.search.ExternalResourceSearchRepository">
+      <point x="24.625" y="-14.5" />
+      <point x="1053.8831206987502" y="1523.0" />
+      <point x="1125.5816941472099" y="1523.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.security.UserDetailsService" target="br.com.conpec.sade.security.UserDetailsService">
+      <point x="0.0" y="14.5" />
+      <point x="3736.0400274805434" y="1184.0" />
+      <point x="3642.0400274805434" y="1184.0" />
+      <point x="3642.0400274805434" y="1149.5" />
+      <point x="-74.0" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.ProjectResource" target="br.com.conpec.sade.repository.ProjectRepository">
+      <point x="-49.5" y="-14.5" />
+      <point x="1422.4247873654172" y="1523.0" />
+      <point x="1274.915027480543" y="1523.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.ProjectResource" target="br.com.conpec.sade.repository.search.ProjectSearchRepository">
+      <point x="-16.5" y="-14.5" />
+      <point x="1455.4247873654172" y="1523.0" />
+      <point x="1457.415027480543" y="1523.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.CacheConfiguration" target="br.com.conpec.sade.config.MetricsConfiguration">
+      <point x="0.0" y="-14.5" />
+      <point x="7722.492157495288" y="1115.0" />
+      <point x="7769.736431703988" y="1115.0" />
+      <point x="41.25" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.UserService" target="br.com.conpec.sade.repository.AuthorityRepository">
+      <point x="-39.0" y="-14.5" />
+      <point x="4212.899875965391" y="1294.0" />
+      <point x="3301.7900274805434" y="1294.0" />
+      <point x="-39.5" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.social.SocialConfiguration" target="br.com.conpec.sade.security.social.CustomSignInAdapter">
+      <point x="52.0" y="-14.5" />
+      <point x="350.06209797147676" y="1105.0" />
+      <point x="7218.673931703988" y="1105.0" />
+      <point x="42.25" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.repository.search.FeedbackSearchRepository" target="br.com.conpec.sade.domain.Feedback">
+      <point x="0.0" y="-14.5" />
+      <point x="718.6328873316929" y="418.0" />
+      <point x="1173.3411638441794" y="418.0" />
+      <point x="-18.958333333333258" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.UserDataResource" target="br.com.conpec.sade.web.rest.UserDataResource">
+      <point x="0.0" y="14.5" />
+      <point x="2164.9247873654176" y="1632.0" />
+      <point x="2071.9247873654176" y="1632.0" />
+      <point x="2071.9247873654176" y="1597.5" />
+      <point x="-73.0" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.repository.CustomSocialUsersConnectionRepository" target="br.com.conpec.sade.repository.CustomSocialConnectionRepository">
+      <point x="-36.5" y="-14.5" />
+      <point x="123.13288733169247" y="906.0" />
+      <point x="156.13288733169247" y="906.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.SecurityConfiguration" target="br.com.conpec.sade.security.AjaxAuthenticationSuccessHandler">
+      <point x="-14.08333333333303" y="-14.5" />
+      <point x="4921.125544941176" y="995.0" />
+      <point x="4818.171254239899" y="995.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.ProjectResource" target="br.com.conpec.sade.domain.Project">
+      <point x="16.5" y="-14.5" />
+      <point x="1488.4247873654172" y="1523.0" />
+      <point x="1559.415027480543" y="1523.0" />
+      <point x="1559.415027480543" y="886.0" />
+      <point x="1194.540027480543" y="886.0" />
+      <point x="32.8125" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.security.social.CustomSignInAdapter" target="br.com.conpec.sade.config.JHipsterProperties">
+      <point x="0.0" y="-14.5" />
+      <point x="7176.423931703988" y="846.0" />
+      <point x="7751.937795337687" y="846.0" />
+      <point x="-58.90625" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.InterviewResource" target="br.com.conpec.sade.web.rest.InterviewResource">
+      <point x="0.0" y="14.5" />
+      <point x="1754.4247873654172" y="1632.0" />
+      <point x="1661.4247873654172" y="1632.0" />
+      <point x="1661.4247873654172" y="1597.5" />
+      <point x="-73.0" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.UserSearchService" target="br.com.conpec.sade.repository.UserDataRepository">
+      <point x="0.0" y="-14.5" />
+      <point x="2245.665027480543" y="1314.0" />
+      <point x="2253.415027480543" y="1314.0" />
+      <point x="52.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.dto.UserDTO" target="br.com.conpec.sade.config.Constants">
+      <point x="29.33333333333303" y="-14.5" />
+      <point x="6297.24734848485" y="826.0" />
+      <point x="6697.690027480544" y="826.0" />
+      <point x="6697.690027480544" y="149.0" />
+      <point x="8062.504759623402" y="149.0" />
+      <point x="-37.714285714285325" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.ProfileInfoResource" target="br.com.conpec.sade.config.JHipsterProperties">
+      <point x="-38.5" y="-14.5" />
+      <point x="8951.627056703988" y="846.0" />
+      <point x="7869.750295337687" y="846.0" />
+      <point x="58.90625" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.SocialService" target="br.com.conpec.sade.repository.AuthorityRepository">
+      <point x="-48.42857142857156" y="-14.5" />
+      <point x="3489.861456051972" y="1095.0" />
+      <point x="3380.7900274805434" y="1095.0" />
+      <point x="39.5" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.JHipsterProperties" target="br.com.conpec.sade.config.JHipsterProperties.Swagger">
+      <point x="-12.08333333333303" y="-14.5" />
+      <point x="7798.760712004354" y="617.0" />
+      <point x="7437.340598370654" y="617.0" />
+      <point x="-28.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.SocialUserConnection" target="br.com.conpec.sade.domain.SocialUserConnection">
+      <point x="-67.60000000000036" y="14.5" />
+      <point x="36.899999999999636" y="258.0" />
+      <point x="0.0" y="258.0" />
+      <point x="0.0" y="223.5" />
+      <point x="-84.5" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.UserService" target="br.com.conpec.sade.service.UserService">
+      <point x="-34.66666666666666" y="14.5" />
+      <point x="4217.233209298725" y="1383.0" />
+      <point x="4179.899875965391" y="1383.0" />
+      <point x="4179.899875965391" y="1348.5" />
+      <point x="-52.0" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.MetricsConfiguration" target="br.com.conpec.sade.config.MetricsConfiguration">
+      <point x="-41.25" y="14.5" />
+      <point x="7687.236431703988" y="975.0" />
+      <point x="7625.986431703988" y="975.0" />
+      <point x="7625.986431703988" y="940.5" />
+      <point x="-82.5" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.DatabaseConfiguration" target="br.com.conpec.sade.config.DatabaseConfiguration">
+      <point x="-44.25" y="14.5" />
+      <point x="8385.627056703988" y="487.0" />
+      <point x="8321.377056703988" y="487.0" />
+      <point x="8321.377056703988" y="452.5" />
+      <point x="-88.5" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.UserResource" target="br.com.conpec.sade.repository.UserRepository">
+      <point x="-10.636363636363512" y="-14.5" />
+      <point x="4001.8111510017816" y="1473.0" />
+      <point x="3945.899875965392" y="1473.0" />
+      <point x="3945.899875965392" y="1045.0" />
+      <point x="4097.8556017566925" y="1045.0" />
+      <point x="-10.58333333333303" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.SecurityConfiguration" target="br.com.conpec.sade.config.JHipsterProperties">
+      <point x="70.41666666666697" y="-14.5" />
+      <point x="5005.625544941176" y="1115.0" />
+      <point x="7271.423931703988" y="1115.0" />
+      <point x="7271.423931703988" y="856.0" />
+      <point x="7761.000295337687" y="856.0" />
+      <point x="-49.84375" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.social.SocialConfiguration" target="br.com.conpec.sade.config.social.SocialConfiguration">
+      <point x="0.0" y="14.5" />
+      <point x="298.06209797147676" y="1184.0" />
+      <point x="200.06209797147676" y="1184.0" />
+      <point x="200.06209797147676" y="1149.5" />
+      <point x="-78.0" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.DefaultProfileUtil" target="br.com.conpec.sade.config.Constants">
+      <point x="0.0" y="-14.5" />
+      <point x="9311.627056703988" y="129.0" />
+      <point x="8137.933331051972" y="129.0" />
+      <point x="37.714285714285325" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.MetricsConfiguration.GraphiteRegistry" target="br.com.conpec.sade.config.JHipsterProperties">
+      <point x="0.0" y="-14.5" />
+      <point x="7378.986431703988" y="876.0" />
+      <point x="7779.125295337687" y="876.0" />
+      <point x="-31.71875" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.JHipsterProperties.Metrics" target="br.com.conpec.sade.config.JHipsterProperties.Metrics.Logs">
+      <point x="29.25" y="-14.5" />
+      <point x="6547.572514638145" y="408.0" />
+      <point x="6656.190027480544" y="408.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.LocaleConfiguration" target="br.com.conpec.sade.config.locale.AngularCookieLocaleResolver">
+      <point x="-39.75" y="-14.5" />
+      <point x="608.25" y="1737.0" />
+      <point x="593.5" y="1737.0" />
+      <point x="-54.5" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.errors.ExceptionTranslator" target="br.com.conpec.sade.web.rest.errors.CustomParameterizedException">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.repository.search.UserSearchRepository" target="br.com.conpec.sade.domain.User">
+      <point x="0.0" y="-14.5" />
+      <point x="3862.1233608138764" y="378.0" />
+      <point x="5582.667300207817" y="378.0" />
+      <point x="-9.545454545454959" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.Interview" target="br.com.conpec.sade.domain.Skill">
+      <point x="38.9375" y="-14.5" />
+      <point x="1744.208333333334" y="1095.0" />
+      <point x="2339.665027480543" y="1095.0" />
+      <point x="2339.665027480543" y="308.0" />
+      <point x="2373.137249702765" y="308.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.Authority" target="br.com.conpec.sade.domain.Authority">
+      <point x="-31.84999999999991" y="14.5" />
+      <point x="5637.537754753272" y="59.0" />
+      <point x="5593.887754753272" y="59.0" />
+      <point x="5593.887754753272" y="7.25" />
+      <point x="-45.5" y="-7.25" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.FeedbackResource" target="br.com.conpec.sade.domain.Feedback">
+      <point x="-55.5" y="-14.5" />
+      <point x="519.8120979714772" y="1563.0" />
+      <point x="430.6328873316925" y="1563.0" />
+      <point x="430.6328873316925" y="398.0" />
+      <point x="1158.1744971775124" y="398.0" />
+      <point x="-34.125" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.User" target="br.com.conpec.sade.config.Constants">
+      <point x="22.5" y="-14.5" />
+      <point x="5614.712754753271" y="139.0" />
+      <point x="8055.647616766259" y="139.0" />
+      <point x="-44.57142857142844" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.vm.ManagedUserVM" target="br.com.conpec.sade.domain.User">
+      <point x="-33.75" y="-14.5" />
+      <point x="5534.921254239899" y="418.0" />
+      <point x="5593.576391116907" y="418.0" />
+      <point x="1.363636363636033" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.repository.CustomAuditEventRepository" target="br.com.conpec.sade.repository.PersistenceAuditEventRepository">
+      <point x="81.0" y="-14.5" />
+      <point x="2878.790027480543" y="1294.0" />
+      <point x="3042.9566941472094" y="1294.0" />
+      <point x="-79.33333333333348" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.JHipsterProperties" target="br.com.conpec.sade.config.JHipsterProperties.Security">
+      <point x="7.25" y="-14.5" />
+      <point x="7818.094045337687" y="577.0" />
+      <point x="7568.340598370655" y="577.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.Project" target="br.com.conpec.sade.domain.UserData">
+      <point x="20.454545454545496" y="-14.5" />
+      <point x="1182.1820729350884" y="687.0" />
+      <point x="1685.1191941472098" y="687.0" />
+      <point x="-23.73333333333335" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.repository.CustomAuditEventRepository" target="br.com.conpec.sade.domain.PersistentAuditEvent">
+      <point x="-81.0" y="-14.5" />
+      <point x="2716.790027480543" y="1314.0" />
+      <point x="2738.290027480543" y="1314.0" />
+      <point x="2738.290027480543" y="1085.0" />
+      <point x="2808.652314845959" y="1085.0" />
+      <point x="-60.75" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.AccountResource" target="br.com.conpec.sade.service.UserService">
+      <point x="-41.125" y="-14.5" />
+      <point x="5857.583878274509" y="1433.0" />
+      <point x="4286.566542632059" y="1433.0" />
+      <point x="34.66666666666697" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.repository.UserRepository" target="br.com.conpec.sade.domain.User">
+      <point x="0.0" y="-14.5" />
+      <point x="4108.438935090026" y="388.0" />
+      <point x="5585.394572935089" y="388.0" />
+      <point x="-6.8181818181819835" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.JHipsterProperties" target="br.com.conpec.sade.config.JHipsterProperties.Mail">
+      <point x="36.25" y="-14.5" />
+      <point x="7847.094045337687" y="517.0" />
+      <point x="7823.844045337687" y="517.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.UserData" target="br.com.conpec.sade.domain.Skill">
+      <point x="16.6875" y="-14.5" />
+      <point x="1725.540027480543" y="288.0" />
+      <point x="2360.0261385916538" y="288.0" />
+      <point x="-13.111111111111313" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.Interview" target="br.com.conpec.sade.domain.Interview">
+      <point x="-33.375" y="14.5" />
+      <point x="1671.895833333334" y="1184.0" />
+      <point x="1640.770833333334" y="1184.0" />
+      <point x="1640.770833333334" y="1149.5" />
+      <point x="-44.5" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.UserService" target="br.com.conpec.sade.security.AuthoritiesConstants">
+      <point x="13.0" y="-14.5" />
+      <point x="4264.899875965391" y="1224.0" />
+      <point x="4351.733209298725" y="1224.0" />
+      <point x="4351.733209298725" y="1065.0" />
+      <point x="4295.688935090026" y="1065.0" />
+      <point x="20.75" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.AsyncConfiguration" target="br.com.conpec.sade.config.AsyncConfiguration">
+      <point x="0.0" y="14.5" />
+      <point x="8814.627056703988" y="975.0" />
+      <point x="8716.127056703988" y="975.0" />
+      <point x="8716.127056703988" y="940.5" />
+      <point x="-78.5" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.JHipsterProperties" target="br.com.conpec.sade.config.JHipsterProperties.Logging">
+      <point x="-45.91666666666697" y="-14.5" />
+      <point x="7764.92737867102" y="687.0" />
+      <point x="6780.356694147211" y="687.0" />
+      <point x="27.66666666666697" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.AuditResource" target="br.com.conpec.sade.web.rest.util.PaginationUtil">
+      <point x="41.0" y="-14.5" />
+      <point x="3087.1331206987506" y="1563.0" />
+      <point x="3189.6331206987506" y="1563.0" />
+      <point x="-30.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.security.CustomPersistentRememberMeServices" target="br.com.conpec.sade.security.CustomPersistentRememberMeServices">
+      <point x="0.0" y="14.5" />
+      <point x="5840.1321169082075" y="1383.0" />
+      <point x="5681.1321169082075" y="1383.0" />
+      <point x="5681.1321169082075" y="1348.5" />
+      <point x="-139.0" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.JHipsterProperties" target="br.com.conpec.sade.config.JHipsterProperties.Async">
+      <point x="21.75" y="-14.5" />
+      <point x="7832.594045337687" y="547.0" />
+      <point x="7739.844045337687" y="547.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.repository.search.UserDataSearchRepository" target="br.com.conpec.sade.domain.UserData">
+      <point x="0.0" y="-14.5" />
+      <point x="2092.415027480543" y="727.0" />
+      <point x="1726.6525274805426" y="727.0" />
+      <point x="17.799999999999955" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.WebConfigurer" target="br.com.conpec.sade.config.JHipsterProperties">
+      <point x="0.0" y="-14.5" />
+      <point x="8198.242157495288" y="1095.0" />
+      <point x="8245.486431703988" y="1095.0" />
+      <point x="8245.486431703988" y="876.0" />
+      <point x="7842.562795337687" y="876.0" />
+      <point x="31.71875" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.Project" target="br.com.conpec.sade.domain.enumeration.ProjectStatus">
+      <point x="-34.09090909090901" y="-14.5" />
+      <point x="1127.636618389634" y="737.0" />
+      <point x="1086.4548002078154" y="737.0" />
+      <point x="-28.5" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.JHipsterProperties" target="br.com.conpec.sade.config.JHipsterProperties.Metrics">
+      <point x="-65.25" y="-14.5" />
+      <point x="7745.594045337687" y="727.0" />
+      <point x="6518.322514638145" y="727.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.security.social.CustomSignInAdapter" target="br.com.conpec.sade.security.social.CustomSignInAdapter">
+      <point x="-42.25" y="14.5" />
+      <point x="7134.173931703988" y="975.0" />
+      <point x="7071.923931703988" y="975.0" />
+      <point x="7071.923931703988" y="940.5" />
+      <point x="-84.5" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.SkillResource" target="br.com.conpec.sade.domain.Skill">
+      <point x="43.5" y="-14.5" />
+      <point x="2500.674787365417" y="1553.0" />
+      <point x="2593.662243392299" y="1553.0" />
+      <point x="2593.662243392299" y="1075.0" />
+      <point x="2777.902314845959" y="1075.0" />
+      <point x="2777.902314845959" y="278.0" />
+      <point x="2399.3594719249872" y="278.0" />
+      <point x="26.22222222222217" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.security.UserDetailsService" target="br.com.conpec.sade.security.UserNotActivatedException">
+      <point x="-49.333333333333485" y="-14.5" />
+      <point x="3686.7066941472094" y="1005.0" />
+      <point x="3655.1233608138764" y="1005.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.AccountResource" target="br.com.conpec.sade.repository.UserRepository">
+      <point x="-29.375" y="-14.5" />
+      <point x="5869.333878274509" y="1423.0" />
+      <point x="4392.801391116907" y="1423.0" />
+      <point x="4392.801391116907" y="1035.0" />
+      <point x="4140.188935090026" y="1035.0" />
+      <point x="31.75" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.repository.ProjectRepository" target="br.com.conpec.sade.domain.Project">
+      <point x="0.0" y="-14.5" />
+      <point x="1274.915027480543" y="906.0" />
+      <point x="1175.790027480543" y="906.0" />
+      <point x="14.0625" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.errors.ExceptionTranslator" target="br.com.conpec.sade.web.rest.errors.ErrorConstants">
+      <point x="63.19999999999999" y="-14.5" />
+      <point x="294.7" y="1821.0" />
+      <point x="431.0" y="1821.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.UserResource" target="br.com.conpec.sade.service.UserService">
+      <point x="10.636363636363512" y="-14.5" />
+      <point x="4023.0838782745086" y="1473.0" />
+      <point x="4251.899875965391" y="1473.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.errors.CustomParameterizedException" target="br.com.conpec.sade.web.rest.errors.ParameterizedErrorVM">
+      <point x="57.75" y="-14.5" />
+      <point x="289.25" y="1737.0" />
+      <point x="281.24642857142857" y="1737.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.security.Http401UnauthorizedEntryPoint" target="br.com.conpec.sade.security.Http401UnauthorizedEntryPoint">
+      <point x="-58.0" y="14.5" />
+      <point x="5306.171254239899" y="975.0" />
+      <point x="5228.171254239899" y="975.0" />
+      <point x="5228.171254239899" y="940.5" />
+      <point x="-116.0" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.InterviewResource" target="br.com.conpec.sade.repository.search.InterviewSearchRepository">
+      <point x="18.25" y="-14.5" />
+      <point x="1772.6747873654172" y="1523.0" />
+      <point x="1845.415027480543" y="1523.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.Project" target="br.com.conpec.sade.domain.Project">
+      <point x="-32.8125" y="14.5" />
+      <point x="1128.915027480543" y="806.0" />
+      <point x="1104.227527480543" y="806.0" />
+      <point x="1104.227527480543" y="771.5" />
+      <point x="-37.5" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.security.CustomPersistentRememberMeServices" target="br.com.conpec.sade.domain.PersistentToken">
+      <point x="55.600000000000364" y="-14.5" />
+      <point x="5895.732116908208" y="1294.0" />
+      <point x="5983.458878274509" y="1294.0" />
+      <point x="5983.458878274509" y="727.0" />
+      <point x="5929.3821169082075" y="727.0" />
+      <point x="26.600000000000364" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.LoggingConfiguration" target="br.com.conpec.sade.config.LoggingConfiguration">
+      <point x="0.0" y="14.5" />
+      <point x="8149.986431703988" y="975.0" />
+      <point x="8044.986431703988" y="975.0" />
+      <point x="8044.986431703988" y="940.5" />
+      <point x="-85.0" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.LoggingAspectConfiguration" target="br.com.conpec.sade.config.Constants">
+      <point x="-71.0" y="-14.5" />
+      <point x="9123.627056703988" y="418.0" />
+      <point x="9104.055628132559" y="418.0" />
+      <point x="9104.055628132559" y="149.0" />
+      <point x="8124.219045337687" y="149.0" />
+      <point x="24.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.Project" target="br.com.conpec.sade.domain.ExternalResource">
+      <point x="-4.6875" y="14.5" />
+      <point x="1157.040027480543" y="896.0" />
+      <point x="1068.020833333334" y="896.0" />
+      <point x="17.5" y="-14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.SocialController" target="br.com.conpec.sade.service.SocialService">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.MailService" target="br.com.conpec.sade.config.JHipsterProperties">
+      <point x="25.5" y="-14.5" />
+      <point x="6147.576391116907" y="836.0" />
+      <point x="7742.875295337687" y="836.0" />
+      <point x="-67.96875" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.security.SpringSecurityAuditorAware" target="br.com.conpec.sade.config.Constants">
+      <point x="51.75" y="-14.5" />
+      <point x="5068.271378274509" y="1304.0" />
+      <point x="7000.690027480544" y="1304.0" />
+      <point x="7000.690027480544" y="159.0" />
+      <point x="8069.361902480544" y="159.0" />
+      <point x="-30.857142857143117" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.liquibase.AsyncSpringLiquibase" target="br.com.conpec.sade.config.Constants">
+      <point x="0.0" y="-14.5" />
+      <point x="8501.127056703988" y="179.0" />
+      <point x="8103.647616766259" y="179.0" />
+      <point x="3.4285714285715585" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.aop.logging.LoggingAspect" target="br.com.conpec.sade.config.Constants">
+      <point x="0.0" y="-14.5" />
+      <point x="9211.627056703988" y="139.0" />
+      <point x="8131.07618819483" y="139.0" />
+      <point x="30.857142857143117" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.repository.CustomSocialUsersConnectionRepository" target="br.com.conpec.sade.domain.SocialUserConnection">
+      <point x="-109.5" y="-14.5" />
+      <point x="50.13288733169247" y="906.0" />
+      <point x="17.132887331692473" y="906.0" />
+      <point x="17.132887331692473" y="398.0" />
+      <point x="70.69999999999982" y="398.0" />
+      <point x="-33.80000000000018" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.UserResource" target="br.com.conpec.sade.service.MailService">
+      <point x="42.545454545454504" y="-14.5" />
+      <point x="4054.9929691835996" y="1503.0" />
+      <point x="6134.826391116907" y="1503.0" />
+      <point x="12.75" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.repository.UserDataRepository" target="br.com.conpec.sade.domain.UserData">
+      <point x="0.0" y="-14.5" />
+      <point x="2201.415027480543" y="717.0" />
+      <point x="1732.585860813876" y="717.0" />
+      <point x="23.73333333333312" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.JHipsterProperties.Cache" target="br.com.conpec.sade.config.JHipsterProperties.Cache.Ehcache">
+      <point x="-23.33333333333303" y="-14.5" />
+      <point x="6925.356694147211" y="418.0" />
+      <point x="6921.023360813877" y="418.0" />
+      <point x="-27.66666666666697" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.CloudDatabaseConfiguration" target="br.com.conpec.sade.config.Constants">
+      <point x="0.0" y="-14.5" />
+      <point x="7773.340598370655" y="179.0" />
+      <point x="8083.07618819483" y="179.0" />
+      <point x="-17.142857142856883" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.AccountResource" target="br.com.conpec.sade.web.rest.util.HeaderUtil">
+      <point x="-64.625" y="-14.5" />
+      <point x="5834.083878274509" y="1453.0" />
+      <point x="2076.4705830360986" y="1453.0" />
+      <point x="43.55555555555566" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.SocialService" target="br.com.conpec.sade.domain.Authority">
+      <point x="-32.28571428571422" y="-14.5" />
+      <point x="3506.0043131948287" y="1085.0" />
+      <point x="3430.7900274805434" y="1085.0" />
+      <point x="3430.7900274805434" y="109.0" />
+      <point x="5664.837754753271" y="109.0" />
+      <point x="-4.550000000000182" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.SocialService" target="br.com.conpec.sade.repository.search.UserSearchRepository">
+      <point x="16.142857142857338" y="-14.5" />
+      <point x="3554.4328846234002" y="1015.0" />
+      <point x="3806.1233608138764" y="1015.0" />
+      <point x="-56.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.repository.PersistentTokenRepository" target="br.com.conpec.sade.domain.User">
+      <point x="-50.0" y="-14.5" />
+      <point x="5706.171254239899" y="1065.0" />
+      <point x="5749.307617876262" y="1065.0" />
+      <point x="5749.307617876262" y="408.0" />
+      <point x="5596.303663844181" y="408.0" />
+      <point x="4.090909090909008" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.AccountResource" target="br.com.conpec.sade.web.rest.AccountResource">
+      <point x="0.0" y="14.5" />
+      <point x="5898.708878274509" y="1632.0" />
+      <point x="5808.208878274509" y="1632.0" />
+      <point x="5808.208878274509" y="1597.5" />
+      <point x="-70.5" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.repository.CustomSocialConnectionRepository" target="br.com.conpec.sade.repository.SocialUserConnectionRepository">
+      <point x="96.375" y="-14.5" />
+      <point x="252.50788733169247" y="737.0" />
+      <point x="247.93288733169265" y="737.0" />
+      <point x="-47.19999999999999" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.MetricsConfiguration" target="br.com.conpec.sade.config.JHipsterProperties">
+      <point x="0.0" y="-14.5" />
+      <point x="7728.486431703988" y="906.0" />
+      <point x="7806.312795337687" y="906.0" />
+      <point x="-4.53125" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.CacheConfiguration" target="br.com.conpec.sade.config.CacheConfiguration">
+      <point x="0.0" y="14.5" />
+      <point x="7722.492157495288" y="1184.0" />
+      <point x="7623.992157495288" y="1184.0" />
+      <point x="7623.992157495288" y="1149.5" />
+      <point x="-78.5" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.Interview" target="br.com.conpec.sade.domain.UserData">
+      <point x="-16.6875" y="-14.5" />
+      <point x="1688.708333333334" y="717.0" />
+      <point x="1702.9191941472095" y="717.0" />
+      <point x="-5.933333333333394" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.DatabaseConfiguration" target="br.com.conpec.sade.config.Constants">
+      <point x="-44.25" y="-14.5" />
+      <point x="8385.627056703988" y="189.0" />
+      <point x="8096.7904739091155" y="189.0" />
+      <point x="-3.4285714285715585" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.UserDataResource" target="br.com.conpec.sade.web.rest.vm.UserSearchResultVM">
+      <point x="60.833333333333485" y="-14.5" />
+      <point x="2225.758120698751" y="1563.0" />
+      <point x="2669.665027480543" y="1563.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.UserService" target="br.com.conpec.sade.repository.PersistentTokenRepository">
+      <point x="47.66666666666697" y="-14.5" />
+      <point x="4299.566542632059" y="1284.0" />
+      <point x="5689.504587573232" y="1284.0" />
+      <point x="-66.66666666666697" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.UserResource" target="br.com.conpec.sade.repository.search.UserSearchRepository">
+      <point x="-21.27272727272748" y="-14.5" />
+      <point x="3991.1747873654176" y="1483.0" />
+      <point x="3862.1233608138764" y="1483.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.UserResource" target="br.com.conpec.sade.web.rest.util.PaginationUtil">
+      <point x="-42.545454545454504" y="-14.5" />
+      <point x="3969.9020600926906" y="1503.0" />
+      <point x="3249.6331206987506" y="1503.0" />
+      <point x="30.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.errors.ErrorVM" target="br.com.conpec.sade.web.rest.errors.FieldErrorVM">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.Feedback" target="br.com.conpec.sade.domain.Feedback">
+      <point x="-41.708333333333485" y="14.5" />
+      <point x="1150.591163844179" y="258.0" />
+      <point x="1126.7994971775124" y="258.0" />
+      <point x="1126.7994971775124" y="223.5" />
+      <point x="-45.5" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.repository.search.ExternalResourceSearchRepository" target="br.com.conpec.sade.domain.ExternalResource">
+      <point x="0.0" y="-14.5" />
+      <point x="1125.5816941472099" y="1095.0" />
+      <point x="1062.187500000001" y="1095.0" />
+      <point x="11.666666666666742" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.UserData" target="br.com.conpec.sade.domain.Project">
+      <point x="-11.866666666666333" y="14.5" />
+      <point x="1696.9858608138766" y="707.0" />
+      <point x="1195.818436571452" y="707.0" />
+      <point x="34.09090909090901" y="-14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.CloudDatabaseConfiguration" target="br.com.conpec.sade.config.CloudDatabaseConfiguration">
+      <point x="0.0" y="14.5" />
+      <point x="7773.340598370655" y="258.0" />
+      <point x="7646.340598370655" y="258.0" />
+      <point x="7646.340598370655" y="223.5" />
+      <point x="-107.0" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.User" target="br.com.conpec.sade.domain.Authority">
+      <point x="-7.5" y="-14.5" />
+      <point x="5584.712754753271" y="119.0" />
+      <point x="5673.937754753271" y="119.0" />
+      <point x="4.550000000000182" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.vm.ManagedUserVM" target="br.com.conpec.sade.service.dto.UserDTO">
+      <point x="33.75" y="-14.5" />
+      <point x="5602.421254239899" y="1085.0" />
+      <point x="6234.914015151517" y="1085.0" />
+      <point x="-33.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.UserDataResource" target="br.com.conpec.sade.domain.UserData">
+      <point x="36.5" y="-14.5" />
+      <point x="2201.4247873654176" y="1553.0" />
+      <point x="2328.665027480543" y="1553.0" />
+      <point x="2328.665027480543" y="697.0" />
+      <point x="1744.4525274805428" y="697.0" />
+      <point x="35.59999999999991" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.UserData" target="br.com.conpec.sade.domain.UserData">
+      <point x="-41.5333333333333" y="14.5" />
+      <point x="1667.3191941472096" y="487.0" />
+      <point x="1644.352527480543" y="487.0" />
+      <point x="1644.352527480543" y="452.5" />
+      <point x="-44.5" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.Feedback" target="br.com.conpec.sade.domain.UserData">
+      <point x="34.125" y="14.5" />
+      <point x="1226.4244971775124" y="398.0" />
+      <point x="1692.165027480543" y="398.0" />
+      <point x="-16.6875" y="-14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.LoggingConfiguration" target="br.com.conpec.sade.config.JHipsterProperties">
+      <point x="0.0" y="-14.5" />
+      <point x="8149.986431703988" y="886.0" />
+      <point x="7833.500295337687" y="886.0" />
+      <point x="22.65625" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.UserResource" target="br.com.conpec.sade.domain.User">
+      <point x="-31.90909090909099" y="-14.5" />
+      <point x="3980.538423729054" y="1493.0" />
+      <point x="3441.7900274805434" y="1493.0" />
+      <point x="3441.7900274805434" y="338.0" />
+      <point x="5571.758209298727" y="338.0" />
+      <point x="-20.45454545454504" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.LogsResource" target="br.com.conpec.sade.web.rest.vm.LoggerVM">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.AsyncConfiguration" target="br.com.conpec.sade.async.ExceptionHandlingAsyncTaskExecutor">
+      <point x="39.25" y="-14.5" />
+      <point x="68.5" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.UserResource" target="br.com.conpec.sade.web.rest.util.HeaderUtil">
+      <point x="-53.18181818181802" y="-14.5" />
+      <point x="3959.265696456327" y="1513.0" />
+      <point x="2065.5816941472094" y="1513.0" />
+      <point x="32.666666666666515" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.ProjectResource" target="br.com.conpec.sade.web.rest.ProjectResource">
+      <point x="0.0" y="14.5" />
+      <point x="1471.9247873654172" y="1632.0" />
+      <point x="1385.9247873654172" y="1632.0" />
+      <point x="1385.9247873654172" y="1597.5" />
+      <point x="-66.0" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.InterviewResource" target="br.com.conpec.sade.repository.InterviewRepository">
+      <point x="-54.75" y="-14.5" />
+      <point x="1699.6747873654172" y="1523.0" />
+      <point x="1647.915027480543" y="1523.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.security.UserDetailsService" target="br.com.conpec.sade.repository.UserRepository">
+      <point x="49.333333333333485" y="-14.5" />
+      <point x="3785.3733608138764" y="1035.0" />
+      <point x="4076.6889350900256" y="1035.0" />
+      <point x="-31.75" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.Mc437App" target="br.com.conpec.sade.config.DefaultProfileUtil">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.ExternalResourceResource" target="br.com.conpec.sade.web.rest.util.HeaderUtil">
+      <point x="73.875" y="-14.5" />
+      <point x="1103.1331206987502" y="1543.0" />
+      <point x="2011.137249702765" y="1543.0" />
+      <point x="-21.77777777777783" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.repository.CustomSocialUsersConnectionRepository" target="br.com.conpec.sade.repository.SocialUserConnectionRepository">
+      <point x="109.5" y="-14.5" />
+      <point x="269.1328873316925" y="906.0" />
+      <point x="306.1328873316925" y="906.0" />
+      <point x="306.1328873316925" y="727.0" />
+      <point x="342.3328873316923" y="727.0" />
+      <point x="47.19999999999982" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.UserData" target="br.com.conpec.sade.domain.Feedback">
+      <point x="-38.9375" y="-14.5" />
+      <point x="1669.915027480543" y="418.0" />
+      <point x="1211.2578305108455" y="418.0" />
+      <point x="18.958333333333258" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.UserResource" target="br.com.conpec.sade.web.rest.UserResource">
+      <point x="0.0" y="14.5" />
+      <point x="4012.447514638145" y="1632.0" />
+      <point x="3933.947514638145" y="1632.0" />
+      <point x="3933.947514638145" y="1597.5" />
+      <point x="-58.5" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.repository.search.InterviewSearchRepository" target="br.com.conpec.sade.domain.Interview">
+      <point x="0.0" y="-14.5" />
+      <point x="1845.415027480543" y="1304.0" />
+      <point x="1738.645833333334" y="1304.0" />
+      <point x="33.375" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.Feedback" target="br.com.conpec.sade.domain.Project">
+      <point x="-3.79166666666697" y="14.5" />
+      <point x="1189.2729820259974" y="637.0" />
+      <point x="1148.0911638441794" y="637.0" />
+      <point x="-13.636363636363512" y="-14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.repository.search.ProjectSearchRepository" target="br.com.conpec.sade.domain.Project">
+      <point x="0.0" y="-14.5" />
+      <point x="1457.415027480543" y="896.0" />
+      <point x="1185.165027480543" y="896.0" />
+      <point x="23.4375" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.ExternalResource" target="br.com.conpec.sade.domain.Project">
+      <point x="-52.5" y="-14.5" />
+      <point x="998.0208333333339" y="876.0" />
+      <point x="1138.290027480543" y="876.0" />
+      <point x="-23.4375" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.UserResource" target="br.com.conpec.sade.web.rest.vm.ManagedUserVM">
+      <point x="31.90909090909099" y="-14.5" />
+      <point x="4044.356605547236" y="1493.0" />
+      <point x="4325.036239601755" y="1493.0" />
+      <point x="4325.036239601755" y="1274.0" />
+      <point x="5585.546254239899" y="1274.0" />
+      <point x="16.875" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.SocialService" target="br.com.conpec.sade.service.MailService">
+      <point x="48.42857142857156" y="-14.5" />
+      <point x="3586.718598909115" y="1075.0" />
+      <point x="6109.326391116907" y="1075.0" />
+      <point x="-12.75" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.mapper.UserMapper" target="br.com.conpec.sade.service.dto.UserDTO">
+      <point x="0.0" y="-14.5" />
+      <point x="6281.190027480544" y="1095.0" />
+      <point x="6278.914015151517" y="1095.0" />
+      <point x="11.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.WebConfigurer" target="br.com.conpec.sade.config.Constants">
+      <point x="41.66666666666606" y="-14.5" />
+      <point x="8239.908824161954" y="1115.0" />
+      <point x="9077.627056703988" y="1115.0" />
+      <point x="9077.627056703988" y="159.0" />
+      <point x="8117.361902480544" y="159.0" />
+      <point x="17.142857142856883" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.repository.CustomSocialConnectionRepository" target="br.com.conpec.sade.domain.SocialUserConnection">
+      <point x="-96.375" y="-14.5" />
+      <point x="59.75788733169247" y="737.0" />
+      <point x="43.94538733169247" y="737.0" />
+      <point x="43.94538733169247" y="408.0" />
+      <point x="104.5" y="408.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.MetricsConfiguration.SparkRegistry" target="br.com.conpec.sade.config.JHipsterProperties">
+      <point x="0.0" y="-14.5" />
+      <point x="7545.986431703988" y="886.0" />
+      <point x="7788.187795337687" y="886.0" />
+      <point x="-22.65625" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.User" target="br.com.conpec.sade.domain.User">
+      <point x="-28.63636363636374" y="14.5" />
+      <point x="5563.576391116908" y="258.0" />
+      <point x="5542.212754753271" y="258.0" />
+      <point x="5542.212754753271" y="223.5" />
+      <point x="-30.0" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.WebConfigurer" target="br.com.conpec.sade.web.filter.CachingHttpHeadersFilter">
+      <point x="-41.66666666666697" y="-14.5" />
+      <point x="8156.575490828621" y="1095.0" />
+      <point x="7927.986431703988" y="1095.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.ProfileInfoResource" target="br.com.conpec.sade.config.DefaultProfileUtil">
+      <point x="38.5" y="-14.5" />
+      <point x="9028.627056703988" y="906.0" />
+      <point x="9264.960390037322" y="906.0" />
+      <point x="-46.66666666666606" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.AuditEventService" target="br.com.conpec.sade.repository.PersistenceAuditEventRepository">
+      <point x="18.0" y="-14.5" />
+      <point x="3029.287243392299" y="1304.0" />
+      <point x="3122.2900274805434" y="1304.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.security.SecurityUtils" target="br.com.conpec.sade.security.AuthoritiesConstants">
+      <point x="0.0" y="-14.5" />
+      <point x="4068.0665426320584" y="1065.0" />
+      <point x="4254.188935090026" y="1065.0" />
+      <point x="-20.75" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.vm.UserSearchResultVM" target="br.com.conpec.sade.domain.UserData">
+      <point x="-39.75" y="-14.5" />
+      <point x="2629.915027480543" y="687.0" />
+      <point x="1750.3858608138762" y="687.0" />
+      <point x="41.5333333333333" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.SkillResource" target="br.com.conpec.sade.web.rest.SkillResource">
+      <point x="0.0" y="14.5" />
+      <point x="2457.174787365417" y="1632.0" />
+      <point x="2379.174787365417" y="1632.0" />
+      <point x="2379.174787365417" y="1597.5" />
+      <point x="-58.0" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.ApplicationWebXml" target="br.com.conpec.sade.Mc437App">
+      <point x="-38.5" y="-14.5" />
+      <point x="24.75" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.AuditEventService" target="br.com.conpec.sade.config.audit.AuditEventConverter">
+      <point x="-54.0" y="-14.5" />
+      <point x="2957.287243392299" y="1284.0" />
+      <point x="2902.790027480543" y="1284.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.JHipsterProperties.Metrics" target="br.com.conpec.sade.config.JHipsterProperties.Metrics.Spark">
+      <point x="-3.25" y="-14.5" />
+      <point x="6515.072514638145" y="368.0" />
+      <point x="6489.023360813877" y="368.0" />
+      <point x="22.33333333333303" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.JHipsterProperties.Metrics" target="br.com.conpec.sade.config.JHipsterProperties.Metrics.Graphite">
+      <point x="16.25" y="-14.5" />
+      <point x="6534.572514638145" y="388.0" />
+      <point x="6591.023360813877" y="388.0" />
+      <point x="28.33333333333303" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.SkillResource" target="br.com.conpec.sade.repository.search.SkillSearchRepository">
+      <point x="14.5" y="-14.5" />
+      <point x="2471.674787365417" y="1543.0" />
+      <point x="2579.665027480543" y="1543.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.AccountResource" target="br.com.conpec.sade.security.SecurityUtils">
+      <point x="-52.875" y="-14.5" />
+      <point x="5845.833878274509" y="1443.0" />
+      <point x="4142.483209298725" y="1443.0" />
+      <point x="4142.483209298725" y="1314.0" />
+      <point x="4031.0665426320584" y="1314.0" />
+      <point x="-37.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.audit.AuditEventConverter" target="br.com.conpec.sade.domain.PersistentAuditEvent">
+      <point x="0.0" y="-14.5" />
+      <point x="2902.790027480543" y="1095.0" />
+      <point x="2889.652314845959" y="1095.0" />
+      <point x="20.25" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.SecurityConfiguration" target="br.com.conpec.sade.security.AjaxLogoutSuccessHandler">
+      <point x="-42.25" y="-14.5" />
+      <point x="4892.958878274509" y="1005.0" />
+      <point x="4570.671254239899" y="1005.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.PersistentToken" target="br.com.conpec.sade.domain.PersistentToken">
+      <point x="-53.200000000000045" y="14.5" />
+      <point x="5849.582116908207" y="487.0" />
+      <point x="5816.282116908207" y="487.0" />
+      <point x="5816.282116908207" y="452.5" />
+      <point x="-66.5" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.SkillResource" target="br.com.conpec.sade.repository.SkillRepository">
+      <point x="-14.5" y="-14.5" />
+      <point x="2442.674787365417" y="1523.0" />
+      <point x="2413.165027480543" y="1523.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.AuditResource" target="br.com.conpec.sade.service.AuditEventService">
+      <point x="-41.0" y="-14.5" />
+      <point x="3005.1331206987506" y="1563.0" />
+      <point x="2975.287243392299" y="1563.0" />
+      <point x="-36.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.mapper.UserMapper" target="br.com.conpec.sade.domain.Authority">
+      <point x="42.399999999999636" y="-14.5" />
+      <point x="6323.5900274805435" y="1095.0" />
+      <point x="6346.690027480544" y="1095.0" />
+      <point x="6346.690027480544" y="109.0" />
+      <point x="5710.337754753271" y="109.0" />
+      <point x="40.94999999999982" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.AccountResource" target="br.com.conpec.sade.domain.User">
+      <point x="29.375" y="-14.5" />
+      <point x="5928.083878274509" y="1523.0" />
+      <point x="6183.576391116907" y="1523.0" />
+      <point x="6183.576391116907" y="348.0" />
+      <point x="5612.667300207817" y="348.0" />
+      <point x="20.45454545454504" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.UserService" target="br.com.conpec.sade.service.SocialService">
+      <point x="-30.33333333333303" y="-14.5" />
+      <point x="4221.566542632059" y="1284.0" />
+      <point x="3575.9566941472094" y="1284.0" />
+      <point x="37.666666666666515" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.UserDataResource" target="br.com.conpec.sade.repository.UserDataRepository">
+      <point x="-12.166666666666515" y="-14.5" />
+      <point x="2152.758120698751" y="1543.0" />
+      <point x="2130.998360813876" y="1543.0" />
+      <point x="2130.998360813876" y="1314.0" />
+      <point x="2149.415027480543" y="1314.0" />
+      <point x="-52.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.FeedbackResource" target="br.com.conpec.sade.web.rest.util.HeaderUtil">
+      <point x="55.5" y="-14.5" />
+      <point x="630.8120979714772" y="1533.0" />
+      <point x="2000.2483608138764" y="1533.0" />
+      <point x="-32.66666666666674" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.repository.FeedbackRepository" target="br.com.conpec.sade.domain.Feedback">
+      <point x="0.0" y="-14.5" />
+      <point x="520.1328873316925" y="408.0" />
+      <point x="1165.7578305108455" y="408.0" />
+      <point x="-26.541666666666742" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.SecurityConfiguration" target="br.com.conpec.sade.security.Http401UnauthorizedEntryPoint">
+      <point x="42.25" y="-14.5" />
+      <point x="4977.458878274509" y="1065.0" />
+      <point x="5422.171254239899" y="1065.0" />
+      <point x="58.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.SocialService" target="br.com.conpec.sade.domain.User">
+      <point x="0.0" y="-14.5" />
+      <point x="3538.2900274805434" y="1095.0" />
+      <point x="3535.7185989091145" y="1095.0" />
+      <point x="3535.7185989091145" y="358.0" />
+      <point x="5577.212754753271" y="358.0" />
+      <point x="-15.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.MailService" target="br.com.conpec.sade.domain.User">
+      <point x="-25.5" y="-14.5" />
+      <point x="6096.576391116907" y="906.0" />
+      <point x="5752.034890603536" y="906.0" />
+      <point x="5752.034890603536" y="398.0" />
+      <point x="5599.030936571453" y="398.0" />
+      <point x="6.8181818181819835" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.JHipsterProperties" target="br.com.conpec.sade.config.JHipsterProperties.Ribbon">
+      <point x="60.41666666666697" y="-14.5" />
+      <point x="7871.260712004354" y="717.0" />
+      <point x="8766.169211490982" y="717.0" />
+      <point x="-25.33333333333394" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.FeedbackResource" target="br.com.conpec.sade.web.rest.FeedbackResource">
+      <point x="0.0" y="14.5" />
+      <point x="575.3120979714772" y="1632.0" />
+      <point x="481.3120979714772" y="1632.0" />
+      <point x="481.3120979714772" y="1597.5" />
+      <point x="-74.0" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.AccountResource" target="br.com.conpec.sade.repository.PersistentTokenRepository">
+      <point x="-5.875" y="-14.5" />
+      <point x="5892.833878274509" y="1403.0" />
+      <point x="5670.6321169082075" y="1403.0" />
+      <point x="5670.6321169082075" y="1294.0" />
+      <point x="5756.171254239899" y="1294.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.AccountResource" target="br.com.conpec.sade.web.rest.vm.ManagedUserVM">
+      <point x="-17.625" y="-14.5" />
+      <point x="5881.083878274509" y="1413.0" />
+      <point x="5596.6946169082075" y="1413.0" />
+      <point x="5596.6946169082075" y="1274.0" />
+      <point x="5619.296254239899" y="1274.0" />
+      <point x="50.625" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.PersistentToken" target="br.com.conpec.sade.domain.User">
+      <point x="-49.875" y="-14.5" />
+      <point x="5852.907116908207" y="388.0" />
+      <point x="5601.758209298727" y="388.0" />
+      <point x="9.545454545454959" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.JHipsterProperties.Security" target="br.com.conpec.sade.config.JHipsterProperties.Security.RememberMe">
+      <point x="27.33333333333303" y="-14.5" />
+      <point x="7595.673931703988" y="418.0" />
+      <point x="7607.007265037322" y="418.0" />
+      <point x="38.66666666666697" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.ExternalResourceResource" target="br.com.conpec.sade.domain.ExternalResource">
+      <point x="-24.625" y="-14.5" />
+      <point x="1004.6331206987502" y="1523.0" />
+      <point x="991.0816941472099" y="1523.0" />
+      <point x="991.0816941472099" y="1095.0" />
+      <point x="1038.854166666667" y="1095.0" />
+      <point x="-11.66666666666697" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.UserDataResource" target="br.com.conpec.sade.service.UserSearchService">
+      <point x="12.166666666666515" y="-14.5" />
+      <point x="2177.091454032084" y="1543.0" />
+      <point x="2245.665027480543" y="1543.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.repository.SkillRepository" target="br.com.conpec.sade.domain.Skill">
+      <point x="0.0" y="-14.5" />
+      <point x="2413.165027480543" y="308.0" />
+      <point x="2379.6928052583207" y="308.0" />
+      <point x="6.555555555555657" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.UserService" target="br.com.conpec.sade.repository.UserRepository">
+      <point x="4.33333333333303" y="-14.5" />
+      <point x="4256.233209298725" y="1314.0" />
+      <point x="4259.066542632058" y="1314.0" />
+      <point x="4259.066542632058" y="1045.0" />
+      <point x="4119.022268423359" y="1045.0" />
+      <point x="10.58333333333303" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.liquibase.AsyncSpringLiquibase" target="br.com.conpec.sade.config.liquibase.AsyncSpringLiquibase">
+      <point x="-42.5" y="14.5" />
+      <point x="8458.627056703988" y="258.0" />
+      <point x="8396.127056703988" y="258.0" />
+      <point x="8396.127056703988" y="223.5" />
+      <point x="-85.0" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.InterviewResource" target="br.com.conpec.sade.web.rest.util.HeaderUtil">
+      <point x="54.75" y="-14.5" />
+      <point x="1809.1747873654172" y="1563.0" />
+      <point x="2032.915027480543" y="1563.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.apidoc.SwaggerConfiguration" target="br.com.conpec.sade.config.Constants">
+      <point x="42.75" y="-14.5" />
+      <point x="8404.236431703988" y="906.0" />
+      <point x="8617.877056703988" y="906.0" />
+      <point x="8617.877056703988" y="169.0" />
+      <point x="8110.504759623402" y="169.0" />
+      <point x="10.285714285714675" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.UserDataResource" target="br.com.conpec.sade.web.rest.util.HeaderUtil">
+      <point x="-60.833333333333485" y="-14.5" />
+      <point x="2104.091454032084" y="1563.0" />
+      <point x="2043.803916369432" y="1563.0" />
+      <point x="10.888888888888914" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.SecurityConfiguration" target="br.com.conpec.sade.security.AuthoritiesConstants">
+      <point x="-70.41666666666697" y="-14.5" />
+      <point x="4864.792211607842" y="1015.0" />
+      <point x="4337.188935090026" y="1015.0" />
+      <point x="62.25" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.Interview" target="br.com.conpec.sade.domain.ExternalResource">
+      <point x="-27.8125" y="-14.5" />
+      <point x="1677.458333333334" y="1075.0" />
+      <point x="1108.854166666667" y="1075.0" />
+      <point x="58.33333333333326" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.SocialController" target="br.com.conpec.sade.web.rest.SocialController">
+      <point x="0.0" y="14.5" />
+      <point x="3538.2900274805434" y="1383.0" />
+      <point x="3452.2900274805434" y="1383.0" />
+      <point x="3452.2900274805434" y="1348.5" />
+      <point x="-66.0" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.Project" target="br.com.conpec.sade.domain.Feedback">
+      <point x="0.0" y="-14.5" />
+      <point x="1161.727527480543" y="657.0" />
+      <point x="1202.9093456623614" y="657.0" />
+      <point x="11.375" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.SocialService" target="br.com.conpec.sade.service.SocialService">
+      <point x="-37.66666666666663" y="14.5" />
+      <point x="3500.6233608138764" y="1184.0" />
+      <point x="3461.7900274805434" y="1184.0" />
+      <point x="3461.7900274805434" y="1149.5" />
+      <point x="-56.5" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.FeedbackResource" target="br.com.conpec.sade.repository.search.FeedbackSearchRepository">
+      <point x="18.5" y="-14.5" />
+      <point x="593.8120979714772" y="1523.0" />
+      <point x="718.6328873316929" y="1523.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.User" target="br.com.conpec.sade.domain.PersistentToken">
+      <point x="15.0" y="14.5" />
+      <point x="5607.212754753271" y="368.0" />
+      <point x="5919.407116908207" y="368.0" />
+      <point x="16.625" y="-14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.UserData" target="br.com.conpec.sade.domain.Interview">
+      <point x="0.0" y="14.5" />
+      <point x="1708.852527480543" y="727.0" />
+      <point x="1699.708333333334" y="727.0" />
+      <point x="-5.5625" y="-14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.UserService" target="br.com.conpec.sade.security.SecurityUtils">
+      <point x="-13.0" y="-14.5" />
+      <point x="4238.899875965391" y="1264.0" />
+      <point x="4068.0665426320584" y="1264.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.dto.UserDTO" target="br.com.conpec.sade.domain.User">
+      <point x="-29.33333333333303" y="-14.5" />
+      <point x="6238.580681818184" y="826.0" />
+      <point x="6247.315530303033" y="826.0" />
+      <point x="6247.315530303033" y="318.0" />
+      <point x="5620.849118389635" y="318.0" />
+      <point x="28.636363636363967" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.apidoc.SwaggerConfiguration" target="br.com.conpec.sade.config.apidoc.SwaggerConfiguration">
+      <point x="0.0" y="14.5" />
+      <point x="8361.486431703988" y="975.0" />
+      <point x="8255.986431703988" y="975.0" />
+      <point x="8255.986431703988" y="940.5" />
+      <point x="-85.5" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.JHipsterProperties.Metrics" target="br.com.conpec.sade.config.JHipsterProperties.Metrics.Jmx">
+      <point x="-35.75" y="-14.5" />
+      <point x="6482.572514638145" y="418.0" />
+      <point x="6366.523360813877" y="418.0" />
+      <point x="-18.66666666666697" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.mapper.UserMapper" target="br.com.conpec.sade.domain.User">
+      <point x="-21.199999999999818" y="-14.5" />
+      <point x="6259.990027480544" y="1065.0" />
+      <point x="6213.414015151517" y="1065.0" />
+      <point x="6213.414015151517" y="328.0" />
+      <point x="5618.121845662363" y="328.0" />
+      <point x="25.90909090909099" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.JHipsterProperties" target="br.com.conpec.sade.config.JHipsterProperties.Http">
+      <point x="-36.25" y="-14.5" />
+      <point x="7774.594045337687" y="667.0" />
+      <point x="6852.190027480544" y="667.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.Mc437App" target="br.com.conpec.sade.Mc437App">
+      <point x="-24.75" y="14.5" />
+      <point x="9286.877056703988" y="975.0" />
+      <point x="9242.127056703988" y="975.0" />
+      <point x="9242.127056703988" y="940.5" />
+      <point x="-49.5" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.repository.search.SkillSearchRepository" target="br.com.conpec.sade.domain.Skill">
+      <point x="0.0" y="-14.5" />
+      <point x="2579.665027480543" y="298.0" />
+      <point x="2386.2483608138764" y="298.0" />
+      <point x="13.111111111111313" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.DatabaseConfiguration" target="br.com.conpec.sade.config.liquibase.AsyncSpringLiquibase">
+      <point x="44.25" y="-14.5" />
+      <point x="8474.127056703988" y="418.0" />
+      <point x="8543.627056703988" y="418.0" />
+      <point x="42.5" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.Mc437App" target="br.com.conpec.sade.config.JHipsterProperties">
+      <point x="-33.0" y="-14.5" />
+      <point x="9278.627056703988" y="836.0" />
+      <point x="7878.812795337687" y="836.0" />
+      <point x="67.96875" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.security.CustomPersistentRememberMeServices" target="br.com.conpec.sade.repository.UserRepository">
+      <point x="-111.19999999999982" y="-14.5" />
+      <point x="5728.932116908207" y="1204.0" />
+      <point x="4789.1973484848495" y="1204.0" />
+      <point x="4789.1973484848495" y="1025.0" />
+      <point x="4161.3556017566925" y="1025.0" />
+      <point x="52.91666666666697" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.UserService" target="br.com.conpec.sade.domain.Authority">
+      <point x="-47.66666666666697" y="-14.5" />
+      <point x="4204.233209298725" y="1304.0" />
+      <point x="3251.7900274805434" y="1304.0" />
+      <point x="3251.7900274805434" y="89.0" />
+      <point x="5646.637754753272" y="89.0" />
+      <point x="-22.75" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.AsyncConfiguration" target="br.com.conpec.sade.config.JHipsterProperties">
+      <point x="-39.25" y="-14.5" />
+      <point x="8775.377056703988" y="856.0" />
+      <point x="7860.687795337687" y="856.0" />
+      <point x="49.84375" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.SecurityConfiguration" target="br.com.conpec.sade.security.AjaxAuthenticationFailureHandler">
+      <point x="14.08333333333303" y="-14.5" />
+      <point x="4949.292211607842" y="1055.0" />
+      <point x="5086.171254239899" y="1055.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.JHipsterProperties" target="br.com.conpec.sade.config.JHipsterProperties.Social">
+      <point x="50.75" y="-14.5" />
+      <point x="7861.594045337687" y="697.0" />
+      <point x="8572.877056703988" y="697.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.AccountResource" target="br.com.conpec.sade.domain.PersistentToken">
+      <point x="5.875" y="-14.5" />
+      <point x="5904.583878274509" y="1493.0" />
+      <point x="6040.576391116907" y="1493.0" />
+      <point x="6040.576391116907" y="717.0" />
+      <point x="5955.982116908207" y="717.0" />
+      <point x="53.19999999999982" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.UserResource" target="br.com.conpec.sade.security.AuthoritiesConstants">
+      <point x="0.0" y="-14.5" />
+      <point x="4012.447514638145" y="1463.0" />
+      <point x="3967.899875965392" y="1463.0" />
+      <point x="3967.899875965392" y="1055.0" />
+      <point x="4212.688935090026" y="1055.0" />
+      <point x="-62.25" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.security.CustomPersistentRememberMeServices" target="br.com.conpec.sade.config.JHipsterProperties">
+      <point x="111.19999999999982" y="-14.5" />
+      <point x="5951.332116908206" y="1314.0" />
+      <point x="7280.486431703988" y="1314.0" />
+      <point x="7280.486431703988" y="866.0" />
+      <point x="7770.062795337687" y="866.0" />
+      <point x="-40.78125" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.UserData" target="br.com.conpec.sade.domain.User">
+      <point x="27.8125" y="-14.5" />
+      <point x="1736.665027480543" y="318.0" />
+      <point x="5566.303663844181" y="318.0" />
+      <point x="-25.90909090909099" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.MetricsConfiguration.SparkRegistry" target="br.com.conpec.sade.config.MetricsConfiguration.SparkRegistry">
+      <point x="0.0" y="14.5" />
+      <point x="7545.986431703988" y="975.0" />
+      <point x="7466.986431703988" y="975.0" />
+      <point x="7466.986431703988" y="940.5" />
+      <point x="-59.0" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.social.SocialConfiguration" target="br.com.conpec.sade.repository.SocialUserConnectionRepository">
+      <point x="0.0" y="-14.5" />
+      <point x="298.06209797147676" y="1115.0" />
+      <point x="333.1328873316925" y="1115.0" />
+      <point x="333.1328873316925" y="737.0" />
+      <point x="389.53288733169256" y="737.0" />
+      <point x="94.40000000000009" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.AccountResource" target="br.com.conpec.sade.service.MailService">
+      <point x="17.625" y="-14.5" />
+      <point x="5916.333878274509" y="1513.0" />
+      <point x="6159.201391116907" y="1513.0" />
+      <point x="6159.201391116907" y="1075.0" />
+      <point x="6160.326391116907" y="1075.0" />
+      <point x="38.25" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.JHipsterProperties.Logging" target="br.com.conpec.sade.config.JHipsterProperties.Logging.Logstash">
+      <point x="-27.66666666666697" y="-14.5" />
+      <point x="6725.023360813877" y="418.0" />
+      <point x="6723.023360813877" y="418.0" />
+      <point x="-29.66666666666697" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.UserDataResource" target="br.com.conpec.sade.repository.search.UserDataSearchRepository">
+      <point x="-36.5" y="-14.5" />
+      <point x="2128.4247873654176" y="1553.0" />
+      <point x="2092.415027480543" y="1553.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.repository.CustomAuditEventRepository" target="br.com.conpec.sade.config.audit.AuditEventConverter">
+      <point x="27.0" y="-14.5" />
+      <point x="2824.790027480543" y="1314.0" />
+      <point x="2849.1233608138764" y="1314.0" />
+      <point x="-53.666666666666515" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.JHipsterProperties.Http" target="br.com.conpec.sade.config.JHipsterProperties.Http.Cache">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.vm.UserSearchResultVM" target="br.com.conpec.sade.domain.Skill">
+      <point x="39.75" y="-14.5" />
+      <point x="2709.415027480543" y="288.0" />
+      <point x="2392.8039163694316" y="288.0" />
+      <point x="19.666666666666515" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.User" target="br.com.conpec.sade.domain.AbstractAuditingEntity">
+      <point x="-22.5" y="-14.5" />
+      <point x="5569.712754753271" y="79.0" />
+      <point x="5486.387754753272" y="79.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.AccountResource" target="br.com.conpec.sade.service.dto.UserDTO">
+      <point x="41.125" y="-14.5" />
+      <point x="5939.833878274509" y="1533.0" />
+      <point x="6217.690027480544" y="1533.0" />
+      <point x="6217.690027480544" y="1095.0" />
+      <point x="6256.914015151517" y="1095.0" />
+      <point x="-11.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.dto.UserDTO" target="br.com.conpec.sade.domain.Authority">
+      <point x="0.0" y="-14.5" />
+      <point x="6267.914015151517" y="826.0" />
+      <point x="6258.747348484851" y="826.0" />
+      <point x="6258.747348484851" y="129.0" />
+      <point x="5692.137754753272" y="129.0" />
+      <point x="22.75" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.Mc437App" target="br.com.conpec.sade.config.Constants">
+      <point x="33.0" y="-14.5" />
+      <point x="9344.627056703988" y="906.0" />
+      <point x="9392.127056703988" y="906.0" />
+      <point x="9392.127056703988" y="119.0" />
+      <point x="8144.7904739091155" y="119.0" />
+      <point x="44.57142857142844" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.ExternalResource" target="br.com.conpec.sade.domain.ExternalResource">
+      <point x="-58.333333333333485" y="14.5" />
+      <point x="992.1875000000005" y="975.0" />
+      <point x="960.5208333333339" y="975.0" />
+      <point x="960.5208333333339" y="940.5" />
+      <point x="-70.0" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.repository.PersistenceAuditEventRepository" target="br.com.conpec.sade.domain.PersistentAuditEvent">
+      <point x="0.0" y="-14.5" />
+      <point x="3122.2900274805434" y="1095.0" />
+      <point x="2930.152314845959" y="1095.0" />
+      <point x="60.75" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.apidoc.PageableParameterBuilderPlugin" target="br.com.conpec.sade.config.Constants">
+      <point x="0.0" y="-14.5" />
+      <point x="8015.840598370655" y="189.0" />
+      <point x="8089.933331051972" y="189.0" />
+      <point x="-10.285714285714675" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.repository.PersistentTokenRepository" target="br.com.conpec.sade.domain.PersistentToken">
+      <point x="50.0" y="-14.5" />
+      <point x="5806.171254239899" y="1065.0" />
+      <point x="5792.734890603535" y="1065.0" />
+      <point x="5792.734890603535" y="737.0" />
+      <point x="5876.182116908207" y="737.0" />
+      <point x="-26.600000000000364" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.security.UserDetailsService" target="br.com.conpec.sade.domain.User">
+      <point x="0.0" y="-14.5" />
+      <point x="3736.0400274805434" y="1005.0" />
+      <point x="3767.6233608138764" y="1005.0" />
+      <point x="3767.6233608138764" y="368.0" />
+      <point x="5579.940027480545" y="368.0" />
+      <point x="-12.272727272727025" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.ExternalResourceResource" target="br.com.conpec.sade.web.rest.ExternalResourceResource">
+      <point x="0.0" y="14.5" />
+      <point x="1029.2581206987502" y="1632.0" />
+      <point x="910.7581206987502" y="1632.0" />
+      <point x="910.7581206987502" y="1597.5" />
+      <point x="-98.5" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.InterviewResource" target="br.com.conpec.sade.domain.Interview">
+      <point x="-18.25" y="-14.5" />
+      <point x="1736.415027480543" y="1314.0" />
+      <point x="1716.395833333334" y="1314.0" />
+      <point x="11.125" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.WebConfigurer" target="br.com.conpec.sade.config.WebConfigurer">
+      <point x="0.0" y="14.5" />
+      <point x="8198.242157495288" y="1184.0" />
+      <point x="8115.742157495288" y="1184.0" />
+      <point x="8115.742157495288" y="1149.5" />
+      <point x="-62.5" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.social.SocialConfiguration" target="br.com.conpec.sade.repository.CustomSocialUsersConnectionRepository">
+      <point x="-52.0" y="-14.5" />
+      <point x="246.06209797147676" y="1115.0" />
+      <point x="159.63288733169247" y="1115.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.ExternalResourceResource" target="br.com.conpec.sade.repository.ExternalResourceRepository">
+      <point x="-73.875" y="-14.5" />
+      <point x="955.3831206987502" y="1523.0" />
+      <point x="877.0816941472099" y="1523.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.UserService" target="br.com.conpec.sade.service.util.RandomUtil">
+      <point x="-4.33333333333303" y="-14.5" />
+      <point x="4247.566542632059" y="1254.0" />
+      <point x="4196.066542632058" y="1254.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.ApplicationWebXml" target="br.com.conpec.sade.config.DefaultProfileUtil">
+      <point x="38.5" y="-14.5" />
+      <point x="9413.377056703988" y="1115.0" />
+      <point x="9371.627056703988" y="1115.0" />
+      <point x="9371.627056703988" y="896.0" />
+      <point x="9358.293723370654" y="896.0" />
+      <point x="46.66666666666606" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.errors.ExceptionTranslator" target="br.com.conpec.sade.web.rest.errors.ParameterizedErrorVM">
+      <point x="31.600000000000023" y="-14.5" />
+      <point x="263.1" y="1811.0" />
+      <point x="357.5" y="1811.0" />
+      <point x="357.5" y="1737.0" />
+      <point x="337.5797619047619" y="1737.0" />
+      <point x="56.33333333333331" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.CacheConfiguration" target="br.com.conpec.sade.config.JHipsterProperties">
+      <point x="-52.33333333333303" y="-14.5" />
+      <point x="7670.158824161955" y="1115.0" />
+      <point x="7615.486431703988" y="1115.0" />
+      <point x="7615.486431703988" y="896.0" />
+      <point x="7797.250295337687" y="896.0" />
+      <point x="-13.59375" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.repository.AuthorityRepository" target="br.com.conpec.sade.domain.Authority">
+      <point x="0.0" y="-14.5" />
+      <point x="3341.2900274805434" y="99.0" />
+      <point x="5655.737754753272" y="99.0" />
+      <point x="-13.649999999999636" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.UserService" target="br.com.conpec.sade.repository.search.UserSearchRepository">
+      <point x="-21.66666666666697" y="-14.5" />
+      <point x="4230.233209298725" y="1274.0" />
+      <point x="3956.899875965392" y="1274.0" />
+      <point x="3956.899875965392" y="1015.0" />
+      <point x="3918.1233608138764" y="1015.0" />
+      <point x="56.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.SocialService" target="br.com.conpec.sade.repository.UserRepository">
+      <point x="32.28571428571422" y="-14.5" />
+      <point x="3570.575741766257" y="1025.0" />
+      <point x="4055.5222684233586" y="1025.0" />
+      <point x="-52.916666666666515" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.AccountResource" target="br.com.conpec.sade.web.rest.vm.KeyAndPasswordVM">
+      <point x="64.625" y="-14.5" />
+      <point x="5963.333878274509" y="1563.0" />
+      <point x="7142.268761246778" y="1563.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.CacheConfiguration" target="br.com.conpec.sade.config.DatabaseConfiguration">
+      <point x="52.33333333333303" y="-14.5" />
+      <point x="7774.825490828621" y="1105.0" />
+      <point x="8484.252544824314" y="1105.0" />
+      <point x="8484.252544824314" y="677.0" />
+      <point x="8474.127056703988" y="677.0" />
+      <point x="44.25" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.security.SpringSecurityAuditorAware" target="br.com.conpec.sade.security.SecurityUtils">
+      <point x="-51.75" y="-14.5" />
+      <point x="4964.771378274509" y="1214.0" />
+      <point x="4105.066542632058" y="1214.0" />
+      <point x="37.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.async.ExceptionHandlingAsyncTaskExecutor" target="br.com.conpec.sade.async.ExceptionHandlingAsyncTaskExecutor">
+      <point x="-68.5" y="14.5" />
+      <point x="8716.877056703988" y="806.0" />
+      <point x="8628.377056703988" y="806.0" />
+      <point x="8628.377056703988" y="771.5" />
+      <point x="-137.0" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.MetricsConfiguration.GraphiteRegistry" target="br.com.conpec.sade.config.MetricsConfiguration.GraphiteRegistry">
+      <point x="0.0" y="14.5" />
+      <point x="7378.986431703988" y="975.0" />
+      <point x="7290.986431703988" y="975.0" />
+      <point x="7290.986431703988" y="940.5" />
+      <point x="-68.0" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.domain.Skill" target="br.com.conpec.sade.domain.Skill">
+      <point x="-26.22222222222217" y="14.5" />
+      <point x="2346.915027480543" y="258.0" />
+      <point x="2323.637249702765" y="258.0" />
+      <point x="2323.637249702765" y="223.5" />
+      <point x="-29.5" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.MailService" target="br.com.conpec.sade.service.MailService">
+      <point x="-38.25" y="14.5" />
+      <point x="6083.826391116907" y="975.0" />
+      <point x="6051.076391116907" y="975.0" />
+      <point x="6051.076391116907" y="940.5" />
+      <point x="-51.0" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.filter.CachingHttpHeadersFilter" target="br.com.conpec.sade.config.JHipsterProperties">
+      <point x="-48.5" y="-14.5" />
+      <point x="7879.486431703988" y="906.0" />
+      <point x="7815.375295337687" y="906.0" />
+      <point x="4.53125" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.repository.InterviewRepository" target="br.com.conpec.sade.domain.Interview">
+      <point x="0.0" y="-14.5" />
+      <point x="1647.915027480543" y="1314.0" />
+      <point x="1694.145833333334" y="1314.0" />
+      <point x="-11.125" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.security.CustomPersistentRememberMeServices" target="br.com.conpec.sade.repository.PersistentTokenRepository">
+      <point x="-55.600000000000364" y="-14.5" />
+      <point x="5784.532116908207" y="1294.0" />
+      <point x="5822.837920906566" y="1294.0" />
+      <point x="66.66666666666697" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.apidoc.SwaggerConfiguration" target="br.com.conpec.sade.config.JHipsterProperties">
+      <point x="-42.75" y="-14.5" />
+      <point x="8318.736431703988" y="866.0" />
+      <point x="7851.625295337687" y="866.0" />
+      <point x="40.78125" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.repository.ExternalResourceRepository" target="br.com.conpec.sade.domain.ExternalResource">
+      <point x="0.0" y="-14.5" />
+      <point x="877.0816941472099" y="1085.0" />
+      <point x="1015.5208333333339" y="1085.0" />
+      <point x="-35.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.UserSearchService" target="br.com.conpec.sade.domain.UserData">
+      <point x="48.333333333333485" y="-14.5" />
+      <point x="2293.9983608138764" y="1314.0" />
+      <point x="2289.915027480543" y="1314.0" />
+      <point x="2289.915027480543" y="707.0" />
+      <point x="1738.5191941472094" y="707.0" />
+      <point x="29.666666666666515" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.FeedbackResource" target="br.com.conpec.sade.repository.FeedbackRepository">
+      <point x="-18.5" y="-14.5" />
+      <point x="556.8120979714772" y="1553.0" />
+      <point x="520.1328873316925" y="1553.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.UserService" target="br.com.conpec.sade.web.rest.vm.ManagedUserVM">
+      <point x="39.0" y="-14.5" />
+      <point x="4290.899875965391" y="1254.0" />
+      <point x="5518.046254239899" y="1254.0" />
+      <point x="-50.625" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.LoggingAspectConfiguration" target="br.com.conpec.sade.aop.logging.LoggingAspect">
+      <point x="71.0" y="-14.5" />
+      <point x="9265.627056703988" y="418.0" />
+      <point x="9243.127056703988" y="418.0" />
+      <point x="31.5" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.ProjectResource" target="br.com.conpec.sade.web.rest.util.HeaderUtil">
+      <point x="49.5" y="-14.5" />
+      <point x="1521.4247873654172" y="1553.0" />
+      <point x="2022.0261385916538" y="1553.0" />
+      <point x="-10.888888888888914" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.repository.SocialUserConnectionRepository" target="br.com.conpec.sade.domain.SocialUserConnection">
+      <point x="0.0" y="-14.5" />
+      <point x="295.1328873316925" y="418.0" />
+      <point x="172.10000000000036" y="418.0" />
+      <point x="67.6" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.util.HeaderUtil" target="br.com.conpec.sade.web.rest.util.HeaderUtil">
+      <point x="-43.55555555555566" y="14.5" />
+      <point x="1989.3594719249872" y="1383.0" />
+      <point x="1963.915027480543" y="1383.0" />
+      <point x="1963.915027480543" y="1348.5" />
+      <point x="-49.0" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.errors.ExceptionTranslator" target="br.com.conpec.sade.web.rest.errors.ErrorVM">
+      <point x="-63.19999999999999" y="-14.5" />
+      <point x="168.3" y="1821.0" />
+      <point x="35.25" y="1821.0" />
+      <point x="-20.25" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.service.UserService" target="br.com.conpec.sade.domain.User">
+      <point x="30.33333333333303" y="-14.5" />
+      <point x="4282.233209298725" y="1244.0" />
+      <point x="5490.671254239899" y="1244.0" />
+      <point x="5490.671254239899" y="408.0" />
+      <point x="5590.849118389635" y="408.0" />
+      <point x="-1.363636363636033" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.SkillResource" target="br.com.conpec.sade.web.rest.util.HeaderUtil">
+      <point x="-43.5" y="-14.5" />
+      <point x="2413.674787365417" y="1533.0" />
+      <point x="2054.6928052583207" y="1533.0" />
+      <point x="21.77777777777783" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.JHipsterProperties" target="br.com.conpec.sade.config.JHipsterProperties.Cache">
+      <point x="-21.75" y="-14.5" />
+      <point x="7789.094045337687" y="637.0" />
+      <point x="6948.690027480544" y="637.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="br.com.conpec.sade.config.ThymeleafConfiguration" target="br.com.conpec.sade.config.ThymeleafConfiguration">
+      <point x="0.0" y="14.5" />
+      <point x="1078.0" y="1732.0" />
+      <point x="966.0" y="1732.0" />
+      <point x="966.0" y="1697.5" />
+      <point x="-92.0" y="-0.0" />
+    </edge>
+    <edge source="br.com.conpec.sade.web.rest.UserResource" target="br.com.conpec.sade.config.Constants">
+      <point x="53.18181818181802" y="-14.5" />
+      <point x="4065.629332819963" y="1553.0" />
+      <point x="7007.547170337687" y="1553.0" />
+      <point x="7007.547170337687" y="169.0" />
+      <point x="8076.219045337687" y="169.0" />
+      <point x="-24.0" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.15202702702702703" x="4726.0" y="915.5333333333333" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

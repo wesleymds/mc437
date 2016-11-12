@@ -31,6 +31,19 @@
             
             <!-- jhipster-needle-liquibase-add-column - Jhipster will add columns here, do not remove-->
         </createTable>
-        
+    </changeSet>
+
+    <changeSet id="20161116094500-1" author="danilovalente">
+        <addNotNullConstraint columnDataType="varchar(255)"
+                              columnName="name"
+                              tableName="skill" />
+
+        <addNotNullConstraint columnDataType="bit"
+                              columnName="verified"
+                              defaultNullValue="true"
+                              tableName="skill" />
+
+        <addUniqueConstraint columnNames="name"
+                             tableName="skill" />
     </changeSet>
 </databaseChangeLog>

@@ -120,6 +120,42 @@ public class SkillResourceIntTest {
 
     @Test
     @Transactional
+    public void checkNameIsRequired() throws Exception {
+        int databaseSizeBeforeTest = skillRepository.findAll().size();
+        // set the field null
+        skill.setName(null);
+
+        // Create the Skill, which fails.
+
+        restSkillMockMvc.perform(post("/api/skills")
+                .contentType(TestUtil.APPLICATION_JSON_UTF8)
+                .content(TestUtil.convertObjectToJsonBytes(skill)))
+                .andExpect(status().isBadRequest());
+
+        List<Skill> skills = skillRepository.findAll();
+        assertThat(skills).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
+    public void checkVerifiedIsRequired() throws Exception {
+        int databaseSizeBeforeTest = skillRepository.findAll().size();
+        // set the field null
+        skill.setVerified(null);
+
+        // Create the Skill, which fails.
+
+        restSkillMockMvc.perform(post("/api/skills")
+                .contentType(TestUtil.APPLICATION_JSON_UTF8)
+                .content(TestUtil.convertObjectToJsonBytes(skill)))
+                .andExpect(status().isBadRequest());
+
+        List<Skill> skills = skillRepository.findAll();
+        assertThat(skills).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
     public void getAllSkills() throws Exception {
         // Initialize the database
         skillRepository.saveAndFlush(skill);
