@@ -14,7 +14,17 @@
         vm.isAuthenticated = null;
         vm.result = "";
         vm.login = LoginService.open;
-        vm.searchQuery = {}
+        vm.searchQuery = {};
+        vm.disponibilities = [
+            {
+                value: "true",
+                text: "Disponível",
+            },
+            {
+                value: "false",
+                text: "Indisponível",
+            }
+        ];
         $scope.$on('authenticationSuccess', function() {
             getAccount();
         });
