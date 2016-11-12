@@ -19,9 +19,19 @@ public interface UserDataRepository extends JpaRepository<UserData,Long> {
     @Query("select userData from UserData userData left join fetch userData.skills where userData.id =:id")
     UserData findOneWithEagerRelationships(@Param("id") Long id);
 
-    @Query("select ud from UserData ud left join fetch ud.skills" +
-        " where (lower(ud.user.firstName) in :names or lower(ud.user.lastName) similar to :namePattern)")
-    List<UserData> searchWithEagerRelationships(@Param("namePattern") String namePattern,
-                                                @Param("available") Boolean available);
-
+    @Query(value = "select distinct ud from UserData ud" +
+        " left join fetch ud.skills as s" +
+        " where (:searchByName = false or lower(ud.user.firstName) in (:names) or lower(ud.user.lastName) in (:names))" +
+        " and (:searchBySkills = false or lower(s.name) in (:skills))" +
+        " and (:searchBySkills = false)" +
+        " and (:available is null or :available = ud.available)" +
+        " and (:minAvailableHours is null or ud.availableHoursPerWeek >= :minAvailableHours)" +
+        " and (:maxCostPerHour is null or ud.initialCostPerHour <= :maxCostPerHour)")
+    List<UserData> searchWithEagerRelationships(@Param("searchByName") boolean searchByName,
+                                                @Param("names") List<String> names,
+                                                @Param("searchBySkills") boolean searchBySkills,
+                                                @Param("skills") List<String> skills,
+                                                @Param("available") Boolean available,
+                                                @Param("minAvailableHours") Integer minAvailableHours,
+                                                @Param("maxCostPerHour") Integer maxCostPerHour);
 }

@@ -14,6 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
+import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
@@ -47,7 +48,7 @@ public class SkillResource {
      */
     @PostMapping("/skills")
     @Timed
-    public ResponseEntity<Skill> createSkill(@RequestBody Skill skill) throws URISyntaxException {
+    public ResponseEntity<Skill> createSkill(@Valid @RequestBody Skill skill) throws URISyntaxException {
         log.debug("REST request to save Skill : {}", skill);
         if (skill.getId() != null) {
             return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("skill", "idexists", "A new skill cannot already have an ID")).body(null);
@@ -70,7 +71,7 @@ public class SkillResource {
      */
     @PutMapping("/skills")
     @Timed
-    public ResponseEntity<Skill> updateSkill(@RequestBody Skill skill) throws URISyntaxException {
+    public ResponseEntity<Skill> updateSkill(@Valid @RequestBody Skill skill) throws URISyntaxException {
         log.debug("REST request to update Skill : {}", skill);
         if (skill.getId() == null) {
             return createSkill(skill);

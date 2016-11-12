@@ -5,9 +5,13 @@ package br.com.conpec.sade.security;
  */
 public final class AuthoritiesConstants {
 
+    public static final String CCO = "ROLE_CCO";
+
     public static final String ADMIN = "ROLE_ADMIN";
 
     public static final String USER = "ROLE_USER";
+
+    public static final String EXTERNAL = "ROLE_EXTERNAL";
 
     public static final String ANONYMOUS = "ROLE_ANONYMOUS";
 

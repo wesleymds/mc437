@@ -2,10 +2,15 @@ package br.com.conpec.sade.web.rest;
 
 import br.com.conpec.sade.Mc437App;
 
+import br.com.conpec.sade.domain.Authority;
+import br.com.conpec.sade.domain.PersistentToken;
+import br.com.conpec.sade.domain.User;
 import br.com.conpec.sade.domain.UserData;
 import br.com.conpec.sade.repository.UserDataRepository;
 import br.com.conpec.sade.repository.search.UserDataSearchRepository;
 
+import br.com.conpec.sade.security.AuthoritiesConstants;
+import com.google.common.collect.Sets;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,7 +29,11 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
@@ -71,6 +80,24 @@ public class UserDataResourceIntTest {
 
     private static final String DEFAULT_BANK_ACCOUNT = "AAAAA";
     private static final String UPDATED_BANK_ACCOUNT = "BBBBB";
+
+    private static final User DEFAULT_USER = createUserEntity();
+    // TODO: UPDATED_USER
+
+    private static final Authority DEFAULT_AUTHORITY_ROLE_ADMIN = Authority.of(AuthoritiesConstants.ADMIN);
+
+    private static final String DEFAULT_USER_LOGIN = "AAAAA";
+    private static final String DEFAULT_USER_PASSWORD = "AAAAA";
+    private static final String DEFAULT_USER_FIRST_NAME = "AAAAA";
+    private static final String DEFAULT_USER_LAST_NAME = "AAAAA";
+    private static final String DEFAULT_USER_EMAIL = "AAAAA";
+    private static final boolean DEFAULT_USER_ACTIVATED = true;
+    private static final String DEFAULT_USER_LANG_KEY = "AAAAA";
+    private static final String DEFAULT_USER_ACTIVATION_KEY = "AAAAA";
+    private static final String DEFAULT_USER_RESET_KEY = "AAAAA";
+    private static final ZonedDateTime DEFAULT_USER_RESET_DATE = ZonedDateTime.of(2016, 11, 16, 23, 59, 59, 0, ZoneId.of("BET"));
+    private static final Set<Authority> DEFAULT_USER_AUTHORITIES = Sets.newHashSet(DEFAULT_AUTHORITY_ROLE_ADMIN);
+    private static final Set<PersistentToken> DEFAULT_USER_PERSISTENT_TOKENS = Collections.emptySet();
 
     @Inject
     private UserDataRepository userDataRepository;
@@ -120,8 +147,26 @@ public class UserDataResourceIntTest {
                 .availableHoursPerWeek(DEFAULT_AVAILABLE_HOURS_PER_WEEK)
                 .initialCostPerHour(DEFAULT_INITIAL_COST_PER_HOUR)
                 .bankAgency(DEFAULT_BANK_AGENCY)
-                .bankAccount(DEFAULT_BANK_ACCOUNT);
+                .bankAccount(DEFAULT_BANK_ACCOUNT)
+                .user(DEFAULT_USER);
         return userData;
+    }
+
+    private static User createUserEntity() {
+        final User user = new User();
+        user.setLogin(DEFAULT_USER_LOGIN);
+        user.setPassword(DEFAULT_USER_PASSWORD);
+        user.setFirstName(DEFAULT_USER_FIRST_NAME);
+        user.setLastName(DEFAULT_USER_LAST_NAME);
+        user.setEmail(DEFAULT_USER_EMAIL);
+        user.setActivated(DEFAULT_USER_ACTIVATED);
+        user.setLangKey(DEFAULT_USER_LANG_KEY);
+        user.setActivationKey(DEFAULT_USER_ACTIVATION_KEY);
+        user.setResetKey(DEFAULT_USER_RESET_KEY);
+        user.setResetDate(DEFAULT_USER_RESET_DATE);
+        user.setAuthorities(DEFAULT_USER_AUTHORITIES);
+        user.setPersistentTokens(DEFAULT_USER_PERSISTENT_TOKENS);
+        return user;
     }
 
     @Before
@@ -371,6 +416,32 @@ public class UserDataResourceIntTest {
 
         // Search the userData
         restUserDataMockMvc.perform(get("/api/_search/user-data?query=id:" + userData.getId()))
+            .andExpect(status().isOk())
+            .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
+            .andExpect(jsonPath("$.[*].id").value(hasItem(userData.getId().intValue())))
+            .andExpect(jsonPath("$.[*].primaryPhoneNumber").value(hasItem(DEFAULT_PRIMARY_PHONE_NUMBER.toString())))
+            .andExpect(jsonPath("$.[*].secondaryPhoneNumber").value(hasItem(DEFAULT_SECONDARY_PHONE_NUMBER.toString())))
+            .andExpect(jsonPath("$.[*].address").value(hasItem(DEFAULT_ADDRESS.toString())))
+            .andExpect(jsonPath("$.[*].rg").value(hasItem(DEFAULT_RG.toString())))
+            .andExpect(jsonPath("$.[*].cpf").value(hasItem(DEFAULT_CPF.toString())))
+            .andExpect(jsonPath("$.[*].extra").value(hasItem(DEFAULT_EXTRA.toString())))
+            .andExpect(jsonPath("$.[*].available").value(hasItem(DEFAULT_AVAILABLE.booleanValue())))
+            .andExpect(jsonPath("$.[*].availableHoursPerWeek").value(hasItem(DEFAULT_AVAILABLE_HOURS_PER_WEEK)))
+            .andExpect(jsonPath("$.[*].initialCostPerHour").value(hasItem(DEFAULT_INITIAL_COST_PER_HOUR)))
+            .andExpect(jsonPath("$.[*].bankAgency").value(hasItem(DEFAULT_BANK_AGENCY.toString())))
+            .andExpect(jsonPath("$.[*].bankAccount").value(hasItem(DEFAULT_BANK_ACCOUNT.toString())));
+    }
+
+    @Test
+    @Transactional
+    public void queryUserData() throws Exception {
+        // Initialize the database
+        userDataRepository.saveAndFlush(userData);
+
+        final String path = "/api/user-data/search?name=" + userData.getUser().getFirstName();
+
+        // Search the userData
+        restUserDataMockMvc.perform(get(path))
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(userData.getId().intValue())))
