@@ -1,0 +1,28 @@
+<div class = "col-xs-12">
+	<h1>Busca de desenvolvedores</h1>
+	<div class = "row col-md-4 col-md-offset-4">
+		<input class="col-xs-12" ng-model="vm.searchQuery.name" placeholder="Name" />
+		<textarea class="col-xs-12" ng-model="vm.searchQuery.skills" placeholder="Skills"></textarea>
+		<input class="col-xs-12" ng-model="vm.searchQuery.minAvailableHours" placeholder="minAvailableHours" />
+		<input class="col-xs-12" ng-model="vm.searchQuery.maxCostPerHour" placeholder="maxCostPerHour" />
+		<select ng-model="vm.searchQuery.available">
+			<option selected>Selecione</option>
+			<option value = "true">True</option>
+			<option value = "false">False</option>
+		</select>
+		<button ng-click="searchDevs()">
+			SEARCH
+		</button>
+	</div>
+	 <div class ="col-md-4 col-md-offset-4">
+	 	<div ng-repeat="result in vm.result" ng-show="vm.result" class="col-xs-12 text-left">
+	 		<b>{{result.name}}</b>
+	 		<p>
+	 			{{result.email}}<br>
+	 			{{result.availableHoursPerWeek}} horas por semana<br>
+	 			{{result.initialCostPerHour}} por hora<br>
+	 			{{result.skills}}<br>
+	 		</p>
+	 	</div>
+	 </div>
+ </div>
