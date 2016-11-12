@@ -35,3 +35,4 @@ public interface UserDataRepository extends JpaRepository<UserData,Long> {
                                                 @Param("minAvailableHours") Integer minAvailableHours,
                                                 @Param("maxCostPerHour") Integer maxCostPerHour);
 }
+
