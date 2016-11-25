@@ -24,10 +24,10 @@ spring:
         serialization.indent_output: true
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:postgresql://ec2-54-225-112-215.compute-1.amazonaws.com/d4cm4idhq121i3?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
+        url: jdbc:postgresql://ec2-23-23-224-174.compute-1.amazonaws.com/d3qb6s9gmar4r6?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
         name:
-        username: oandlfvlhtvawq
-        password: cVJBXSlUvnE5VY2EZ1_NnO060l
+        username: hjdqgqhxmwrmgm
+        password: tDV8Da_611APWueMGF7pkq7Zm4
         hikari.maximum-pool-size: 3
     jpa:
         database-platform: br.com.conpec.sade.domain.util.FixedPostgreSQL82Dialect
