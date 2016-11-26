@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,400i,700');
+
 body {
-    background: #fafafa;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
+    background: rgb(30,30,30);
+    font-family: Raleway, Helvetica, Arial, sans-serif;
+    color: #eee;
 }
 
 /* ==========================================================================
@@ -390,6 +392,70 @@ dev-search
 
 .dev-search-btn {
     margin: 50px 0;
+}
+
+.dev-search-input {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border: 0px;
+    background-color: rgb(225, 225, 225);
+    height: 50px;
+    font-size: 20px;
+    color: #353535;
+}
+
+.dev-search-input:focus {
+    outline:0;
+}
+
+.orange-search-btn {
+    height: 50px;
+    background-color: #ff6700;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    text-align: center;
+    font-size: 25px;
+    line-height: 50px;
+    color: #eee;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+h1.dev-search-title {
+    margin: 40px 0;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.dev-search-filters {
+    margin: 30px 0;
+}
+
+@media (max-width: 768px) 
+{
+  .orange-search-btn {
+    margin-top: 30px;
+    font-size: 20px;
+  }
+}
+
+
+.orange-search-btn:hover {
+   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+nav.navbar-inverse {
+   background: #3c3c3c;
+    border: 0;
+}
+
+md-select .md-select-value.md-select-placeholder{
+    color: #eee;
+}
+
+
+/* ===== jhipster admin overrides ===== */
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    color: #353535;
 }
 
 /* jhipster-needle-scss-add-main JHipster will add new css style */
