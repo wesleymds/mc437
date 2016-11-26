@@ -1,128 +1,113 @@
 package br.com.conpec.sade.cucumber.stepdefs;
 
+import cucumber.api.PendingException;
+import cucumber.api.java.Before;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.concurrent.TimeUnit;
+
 /**
  * Created by ra121051 on 11/11/16.
  */
 public class DevSearchStepDefs extends StepDefs {
-    private WebDriver driver;
+    private WebDriver webDriver;
+
+
+    @Before
+    public void setup() {
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");//Especificar caminho completo na máquina quando for testar
+
+    }
 
     @cucumber.api.java.en.Given("^the page is open \"([^\"]*)\"$")
     public void thePageIsOpen(String page) throws Throwable {
-        driver.get(page);
+        webDriver = new ChromeDriver();
+        webDriver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+        webDriver.get(page);
 
     }
 
     @cucumber.api.java.en.And("^I am logged in as an admin$")
     public void iAmLoggedInAsAnAdmin() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+        webDriver.findElement(By.id("account-menu")).click();
+        webDriver.findElement(By.id("login")).click();
+        webDriver.findElement(By.id("username")).sendKeys("admin");
+        webDriver.findElement(By.id("password")).sendKeys("admin");
+        webDriver.findElement(By.id("loginButton")).click();
+
     }
 
     @cucumber.api.java.en.When("^I search dev by \"([^\"]*)\"$")
     public void iSearchDevByName(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+        WebElement element = webDriver.findElement(By.id("search-dev"));
+        Thread.sleep(5000);
+        element.click();
+
+        webDriver.findElement(By.id("dev-name")).sendKeys(arg0);
+        webDriver.findElement(By.id("search-devs-button")).click();
+
     }
 
     @cucumber.api.java.en.Then("^the dev is found$")
     public void theDevIsFound() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+        webDriver.close();
     }
 
-    @cucumber.api.java.en.And("^his name is \"([^\"]*)\"$")
-    public void hisNameIs(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+    @When("^I search dev by skill \"([^\"]*)\"$")
+    public void iSearchDevBySkill(String arg0) throws Throwable {
+        WebElement element = webDriver.findElement(By.id("search-dev"));
+        Thread.sleep(5000);
+        element.click();
+        webDriver.findElement(By.name("dev-skills")).click();
+        webDriver.findElement(By.name(arg0)).click();
+        webDriver.findElement(By.className("md-select-backdrop")).click();
+        webDriver.findElement(By.id("search-devs-button")).click();
     }
 
-    @cucumber.api.java.en.When("^I search dev by \"([^\"]*)\"$")
-    public void iSearchDevBy(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
-    }
-
-    @cucumber.api.java.en.And("^Skill is \"([^\"]*)\"$")
-    public void skillIs(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
-    }
-
-    @cucumber.api.java.en.Then("^the dev is found$")
-    public void theDevIsFound() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
-    }
-
-    @cucumber.api.java.en.And("^his skill is \"([^\"]*)\"$")
-    public void hisSkillIs(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
-    }
 
     @cucumber.api.java.en.When("^I search by availability$")
     public void iSearchByAvailability() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+        WebElement element = webDriver.findElement(By.id("search-dev"));
+        Thread.sleep(5000);
+        element.click();
+        webDriver.findElement(By.name("dev-availability")).click();
     }
 
-    @cucumber.api.java.en.And("^initial date is (\\d+)/(\\d+)/(\\d+)$")
-    public void initialDateIs(int arg0, int arg1, int arg2) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+    @And("^the availability is \"([^\"]*)\"$") public void theAvailabilityIs(String arg0)
+        throws Throwable {
+        webDriver.findElement(By.name(arg0)).click();
+        webDriver.findElement(By.id("search-devs-button")).click();
     }
 
-    @cucumber.api.java.en.And("^due date is (\\d+)/(\\d+)/(\\d+)$")
-    public void dueDateIs(int arg0, int arg1, int arg2) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+    @When("^I search by hours availability$") public void iSearchByHoursAvailability()
+        throws Throwable {
+        WebElement element = webDriver.findElement(By.id("search-dev"));
+        Thread.sleep(5000);
+        element.click();
     }
 
-    @cucumber.api.java.en.Then("^the dev is found$")
-    public void theDevIsFound() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+    @And("^the number of hours is \"([^\"]*)\"$")
+    public void theNumberOfHoursIs(String arg0) throws Throwable {
+        webDriver.findElement(By.id("dev-hour-availability")).sendKeys(arg0);
+        webDriver.findElement(By.id("search-devs-button")).click();
     }
 
-    @cucumber.api.java.en.And("^his available between (\\d+)/(\\d+)/(\\d+) and (\\d+)/(\\d+)/(\\d+)$")
-    public void hisAvailableBetweenAnd(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+    @When("^I search dev max hour value$") public void iSearchDevMaxHourValue() throws Throwable {
+        WebElement element = webDriver.findElement(By.id("search-dev"));
+        Thread.sleep(5000);
+        element.click();
     }
 
-    @cucumber.api.java.en.When("^I search dev by project$")
-    public void iSearchDevByProject() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
-    }
-
-    @cucumber.api.java.en.And("^project name is \"([^\"]*)\"$")
-    public void projectNameIs(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
-    }
-
-    @cucumber.api.java.en.And("^he is working on project \"([^\"]*)\"$")
-    public void heIsWorkingOnProject(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
-    }
-
-    @cucumber.api.java.en.When("^I search dev by experience$")
-    public void iSearchDevByExperience() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
-    }
-
-    @cucumber.api.java.en.And("^input is has worked before$")
-    public void inputIsHasWorkedBefore() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
-    }
-
-    @cucumber.api.java.en.And("^he has worked for Conpec before$")
-    public void heHasWorkedForConpecBefore() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+    @And("^the value is \"([^\"]*)\"$") public void theValueIs(String arg0) throws Throwable {
+        webDriver.findElement(By.id("dev-max-hour-cost")).sendKeys(arg0);
+        webDriver.findElement(By.id("search-devs-button")).click();
     }
 }

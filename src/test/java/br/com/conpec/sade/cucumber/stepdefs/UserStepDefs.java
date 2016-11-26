@@ -1,5 +1,6 @@
 package br.com.conpec.sade.cucumber.stepdefs;
 
+import br.com.conpec.sade.web.rest.UserDataResource;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;

@@ -2,8 +2,8 @@
 	<div class = "col-xs-12">
 	<h1 class="col-xs-12 dev-search-title">Busca de desenvolvedores</h1>
 	<div class = "col-md-8 col-md-offset-2 col-xs-12">
-	    <input class="dev-search-input col-md-11 col-sm-11 col-xs-12" ng-model="vm.searchQuery.name" placeholder="Nome">
-	    <div ng-click="searchDevs()" class="orange-search-btn col-md-1 col-sm-1 hidden-xs">
+	    <input id="dev-name" class="dev-search-input col-md-11 col-sm-11 col-xs-12" ng-model="vm.searchQuery.name" placeholder="Nome">
+	    <div ng-click="searchDevs()" id="search-devs-button" class="orange-search-btn col-md-1 col-sm-1 hidden-xs">
 	    	<i class="glyphicon glyphicon-search"></i>
 	    </div>
 	    <div class="orange-search-btn col-xs-8 col-xs-offset-2 hidden-md hidden-sm hidden-lg">
@@ -12,15 +12,15 @@
 	</div>
 
 	<div class = "col-md-12 col-xs-12 dev-search-filters">
-		<div class="col-md-3 text-center">
+		<div class="col-md-3 text-center" name="dev-skills">
 			<md-select ng-model="vm.searchQuery.skills" multiple="true" placeholder="Skills" class="md-no-underline">
-	          <md-option ng-repeat="skill in vm.skills" ng-value="skill.name">{{skill.name}}</md-option>
+	          <md-option ng-repeat="skill in vm.skills" ng-value="skill.name" name="{{skill.name}}">{{skill.name}}</md-option>
         	</md-select>
 		</div>
-		<div class="col-md-3 text-center">
+		<div class="col-md-3 text-center" name="dev-availability">
 			<md-select ng-model="vm.searchQuery.available" placeholder="Disponibilidade" class="md-no-underline">
-	          <md-option ng-value="true">Disponível</md-option>
-	          <md-option ng-value="false">Indisponível</md-option>
+	          <md-option ng-value="true" name="available">Disponível</md-option>
+	          <md-option ng-value="false" name="not-available">Indisponível</md-option>
         	</md-select>
 		</div>
 		<div class="col-md-3 text-center">
@@ -29,7 +29,7 @@
 		      <md-slider flex ng-model="vm.searchQuery.minAvailableHours" min="1" max="40" aria-label="blue" id="hour-slider" class="md-primary">
 		      </md-slider>
 		      <md-input-container>
-		        <input flex type="number" ng-model="vm.searchQuery.minAvailableHours" aria-label="blue" aria-controls="hour-slider">
+		        <input flex id="dev-hour-availability" type="number" ng-model="vm.searchQuery.minAvailableHours" aria-label="blue" aria-controls="hour-slider">
 		      </md-input-container>
 			</md-slider-container>
 		</div>
@@ -39,7 +39,7 @@
 		      <md-slider flex ng-model="vm.searchQuery.maxCostPerHour" min="0" max="100" aria-label="blue" id="blue-slider" class="md-primary">
 		      </md-slider>
 		      <md-input-container>
-		        <input flex type="number" ng-model="vm.searchQuery.maxCostPerHour" aria-label="blue" aria-controls="blue-slider">
+		        <input flex type="number" id="dev-max-hour-cost" ng-model="vm.searchQuery.maxCostPerHour" aria-label="blue" aria-controls="blue-slider">
 		      </md-input-container>
 			</md-slider-container>
 		</div>
