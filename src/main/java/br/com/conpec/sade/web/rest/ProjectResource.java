@@ -1,14 +1,19 @@
 package br.com.conpec.sade.web.rest;
 
+import br.com.conpec.sade.domain.*;
+import br.com.conpec.sade.repository.ExternalResourceRepository;
+import br.com.conpec.sade.repository.UserDataRepository;
+import br.com.conpec.sade.security.AuthoritiesConstants;
+import br.com.conpec.sade.web.rest.request.CreateExternalResourceRequest;
+import br.com.conpec.sade.web.rest.request.CreateProjectRequest;
 import com.codahale.metrics.annotation.Timed;
-import br.com.conpec.sade.domain.Project;
 
 import br.com.conpec.sade.repository.ProjectRepository;
 import br.com.conpec.sade.repository.search.ProjectSearchRepository;
 import br.com.conpec.sade.web.rest.util.HeaderUtil;
+import org.apache.commons.lang3.Validate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,8 +22,10 @@ import javax.inject.Inject;
 import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -32,29 +39,65 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 public class ProjectResource {
 
     private final Logger log = LoggerFactory.getLogger(ProjectResource.class);
-        
+
     @Inject
     private ProjectRepository projectRepository;
 
     @Inject
     private ProjectSearchRepository projectSearchRepository;
 
+    @Inject
+    private UserDataRepository userDataRepository;
+
+    @Inject
+    private ExternalResourceRepository externalResourceRepository;
+
     /**
      * POST  /projects : Create a new project.
      *
-     * @param project the project to create
+     * @param request the project to create
      * @return the ResponseEntity with status 201 (Created) and with body the new project, or with status 400 (Bad Request) if the project has already an ID
      * @throws URISyntaxException if the Location URI syntax is incorrect
      */
     @PostMapping("/projects")
     @Timed
-    public ResponseEntity<Project> createProject(@Valid @RequestBody Project project) throws URISyntaxException {
-        log.debug("REST request to save Project : {}", project);
-        if (project.getId() != null) {
-            return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("project", "idexists", "A new project cannot already have an ID")).body(null);
-        }
+    public ResponseEntity<Project> createProject(@Valid @RequestBody CreateProjectRequest request) throws URISyntaxException {
+        log.debug("REST request to save Project : {}", request);
+
+        // Find and validate manager
+        UserData manager = userDataRepository.findOne(request.getManagerId());
+        Validate.notNull(manager, "Cannot find manager with id=" + request.getManagerId());
+        Validate.isTrue(manager.getUser().getActivated(), "Manager is not activated");
+        Validate.isTrue(isMember(manager.getUser()), "Manager is not a member");
+
+        // Find and validate assessors
+        Set<UserData> assessors = new HashSet<>(userDataRepository.findAll(request.getAssessorsIds()));
+        assessors.forEach(assessor -> Validate.notNull(assessor, "Invalid assessor"));
+        assessors.forEach(assessor -> Validate.isTrue(isMember(assessor.getUser()), "Assessor " +
+            assessor.getUser().getFirstName() + "is not a member"));
+
+        // Find and validate developers
+        Set<UserData> developers = new HashSet<>(userDataRepository.findAll(request.getDevelopersIds()));
+        developers.forEach(developer -> Validate.notNull(developer, "Invalid developer"));
+
+        // Validate external resources
+        request.getResources().forEach(this::validateExternalResource);
+
+        // Create project instance
+        Project project = new Project();
+        project.setName(request.getName());
+        project.setDevelopers(developers);
+        project.setAssessors(assessors);
+        project.setManager(manager);
+
+        // Save project on DB
         Project result = projectRepository.save(project);
         projectSearchRepository.save(result);
+
+        // Save project's resources
+        request.getResources()
+            .forEach(resourceRequest -> saveResource(resourceRequest, result.getId()));
+
         return ResponseEntity.created(new URI("/api/projects/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert("project", result.getId().toString()))
             .body(result);
@@ -73,14 +116,26 @@ public class ProjectResource {
     @Timed
     public ResponseEntity<Project> updateProject(@Valid @RequestBody Project project) throws URISyntaxException {
         log.debug("REST request to update Project : {}", project);
-        if (project.getId() == null) {
-            return createProject(project);
-        }
         Project result = projectRepository.save(project);
         projectSearchRepository.save(result);
         return ResponseEntity.ok()
             .headers(HeaderUtil.createEntityUpdateAlert("project", project.getId().toString()))
             .body(result);
+    }
+
+    public ResponseEntity<Project> startProject() {
+        // TODO
+        return null;
+    }
+
+    public ResponseEntity<Project> finishProject() {
+        // TODO
+        return null;
+    }
+
+    public ResponseEntity<Project> cancelProject() {
+        // TODO
+        return null;
     }
 
     /**
@@ -133,7 +188,7 @@ public class ProjectResource {
      * SEARCH  /_search/projects?query=:query : search for the project corresponding
      * to the query.
      *
-     * @param query the query of the project search 
+     * @param query the query of the project search
      * @return the result of the search
      */
     @GetMapping("/_search/projects")
@@ -145,5 +200,23 @@ public class ProjectResource {
             .collect(Collectors.toList());
     }
 
+    private boolean isMember(User user) {
+        Authority authority = new Authority();
+        authority.setName(AuthoritiesConstants.MEMBER);
+        return user.getAuthorities().contains(authority);
+    }
 
+    private void validateExternalResource(CreateExternalResourceRequest request) {
+        Validate.notBlank(request.getName(), "External resource name cannot be blank");
+        Validate.notBlank(request.getUrl(), "External resource URL cannot be blank");
+    }
+
+    private void saveResource(CreateExternalResourceRequest request, Long projectId) {
+        ExternalResource resource = new ExternalResource();
+        resource.setName(request.getName());
+        resource.setUrl(resource.getUrl());
+        resource.setProject(projectRepository.findOne(projectId));
+
+        externalResourceRepository.save(resource);
+    }
 }

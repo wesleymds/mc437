@@ -35,32 +35,20 @@
         <table class="jh-table table table-striped">
             <thead>
                 <tr>
-                    <th><span>ID</span></th>
                     <th><span>Name</span></th>
                     <th><span>Status</span></th>
-                    <th><span>Developers</span></th>
-                    <th><span>Assessors</span></th>
                     <th><span>Manager</span></th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="project in vm.projects track by project.id">
-                    <td><a ui-sref="project-detail({id:project.id})">{{project.id}}</a></td>
                     <td>{{project.name}}</td>
-                    <td>{{project.status}}</td>
+                    <td>{{project.status | projectStatus}}</td>
                     <td>
-                        <span ng-repeat="developers in project.developers">
-                            <a class="form-control-static" ui-sref="user-data-detail({id: developers.id})">{{developers.id}}</a>{{$last ? '' : ', '}}
-                        </span>
-                    </td>
-                    <td>
-                        <span ng-repeat="assessors in project.assessors">
-                            <a class="form-control-static" ui-sref="user-data-detail({id: assessors.id})">{{assessors.id}}</a>{{$last ? '' : ', '}}
-                        </span>
-                    </td>
-                    <td>
-                        <a ui-sref="user-data-detail({id:project.manager.id})">{{project.manager.id}}</a>
+                        <a ui-sref="user-data-detail({id:project.manager.id})">
+                            {{project.manager.user.firstName}} {{project.manager.user.lastName}}
+                        </a>
                     </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
