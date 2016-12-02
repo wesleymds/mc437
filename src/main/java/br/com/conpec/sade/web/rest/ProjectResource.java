@@ -124,28 +124,40 @@ public class ProjectResource {
             .body(result);
     }
 
+    // draft->under development
+    // draft->cancelled
+    // under development->cancelled
+    // under development->finished
+
     @GetMapping("/projects/{id}/start")
     @Timed
     public ResponseEntity<Project> startProject(@PathVariable Long id) {
-      return updateStatus(id, ProjectStatus.DRAFT);
+      Project project = projectRepository.findOne(id);
+      Validate.notNull(project, "Cannot find project with this id");
+      Validate.isTrue(project.getStatus() == ProjectStatus.DRAFT);
+      project.setStatus(ProjectStatus.UNDER_DEVELOPMENT);
+      Project project = projectRepository.save(project);
+      return null;
     }
 
     @GetMapping("/projects/{id}/finish")
     @Timed
     public ResponseEntity<Project> finishProject(@PathVariable Long id) {
-      return updateStatus(id, ProjectStatus.UNDER_DEVELOPMENT);
+      Project project = projectRepository.findOne(id);
+      Validate.notNull(project, "Cannot find project with this id");
+      Validate.isTrue(project.getStatus() == ProjectStatus.UNDER_DEVELOPMENT);
+      project.setStatus(ProjectStatus.FINISHED);
+      Project project = projectRepository.save(project);
+      return null;
     }
 
     @GetMapping("/projects/{id}/cancel")
     @Timed
     public ResponseEntity<Project> cancelProject(@PathVariable Long id) {
-      return updateStatus(id, ProjectStatus.CANCELLED);
-    }
-
-    private ResponseEntity<Project> updateStatus(Long id, ProjectStatus status) {
       Project project = projectRepository.findOne(id);
       Validate.notNull(project, "Cannot find project with this id");
-      project.setStatus(status);
+      Validate.isTrue(project.getStatus() == ProjectStatus.DRAFT || project.getStatus() == ProjectStatus.UNDER_DEVELOPMENT);
+      project.setStatus(ProjectStatus.CANCELLED);
       Project project = projectRepository.save(project);
       return null;
     }
