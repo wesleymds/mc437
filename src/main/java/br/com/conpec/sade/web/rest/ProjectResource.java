@@ -89,6 +89,7 @@ public class ProjectResource {
         project.setDevelopers(developers);
         project.setAssessors(assessors);
         project.setManager(manager);
+        project.setStatus(ProjectStatus.DRAFT);
 
         // Save project on DB
         Project result = projectRepository.save(project);
@@ -123,19 +124,30 @@ public class ProjectResource {
             .body(result);
     }
 
-    public ResponseEntity<Project> startProject() {
-        // TODO
-        return null;
+    @GetMapping("/projects/{id}/start")
+    @Timed
+    public ResponseEntity<Project> startProject(@PathVariable Long id) {
+      return updateStatus(id, ProjectStatus.DRAFT);
     }
 
-    public ResponseEntity<Project> finishProject() {
-        // TODO
-        return null;
+    @GetMapping("/projects/{id}/finish")
+    @Timed
+    public ResponseEntity<Project> finishProject(@PathVariable Long id) {
+      return updateStatus(id, ProjectStatus.UNDER_DEVELOPMENT);
     }
 
-    public ResponseEntity<Project> cancelProject() {
-        // TODO
-        return null;
+    @GetMapping("/projects/{id}/cancel")
+    @Timed
+    public ResponseEntity<Project> cancelProject(@PathVariable Long id) {
+      return updateStatus(id, ProjectStatus.CANCELLED);
+    }
+
+    private ResponseEntity<Project> updateStatus(Long id, ProjectStatus status) {
+      Project project = projectRepository.findOne(id);
+      Validate.notNull(project, "Cannot find project with this id");
+      project.setStatus(status);
+      Project project = projectRepository.save(project);
+      return null;
     }
 
     /**
