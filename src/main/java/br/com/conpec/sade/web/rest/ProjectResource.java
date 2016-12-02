@@ -136,8 +136,10 @@ public class ProjectResource {
       Validate.notNull(project, "Cannot find project with this id");
       Validate.isTrue(project.getStatus() == ProjectStatus.DRAFT);
       project.setStatus(ProjectStatus.UNDER_DEVELOPMENT);
-      Project project = projectRepository.save(project);
-      return null;
+      Project result = projectRepository.save(project);
+      return ResponseEntity.ok()
+          .headers(HeaderUtil.createEntityUpdateAlert("project", project.getId().toString()))
+          .body(result);
     }
 
     @GetMapping("/projects/{id}/finish")
@@ -147,8 +149,10 @@ public class ProjectResource {
       Validate.notNull(project, "Cannot find project with this id");
       Validate.isTrue(project.getStatus() == ProjectStatus.UNDER_DEVELOPMENT);
       project.setStatus(ProjectStatus.FINISHED);
-      Project project = projectRepository.save(project);
-      return null;
+      Project result = projectRepository.save(project);
+      return ResponseEntity.ok()
+          .headers(HeaderUtil.createEntityUpdateAlert("project", project.getId().toString()))
+          .body(result);
     }
 
     @GetMapping("/projects/{id}/cancel")
@@ -158,8 +162,10 @@ public class ProjectResource {
       Validate.notNull(project, "Cannot find project with this id");
       Validate.isTrue(project.getStatus() == ProjectStatus.DRAFT || project.getStatus() == ProjectStatus.UNDER_DEVELOPMENT);
       project.setStatus(ProjectStatus.CANCELLED);
-      Project project = projectRepository.save(project);
-      return null;
+      Project result = projectRepository.save(project);
+      return ResponseEntity.ok()
+          .headers(HeaderUtil.createEntityUpdateAlert("project", project.getId().toString()))
+          .body(result);
     }
 
     /**
