@@ -1,6 +1,7 @@
 package br.com.conpec.sade.web.rest;
 
 import br.com.conpec.sade.domain.*;
+import br.com.conpec.sade.domain.enumeration.ProjectStatus;
 import br.com.conpec.sade.repository.ExternalResourceRepository;
 import br.com.conpec.sade.repository.UserDataRepository;
 import br.com.conpec.sade.security.AuthoritiesConstants;
@@ -64,6 +65,8 @@ public class ProjectResource {
     public ResponseEntity<Project> createProject(@Valid @RequestBody CreateProjectRequest request) throws URISyntaxException {
         log.debug("REST request to save Project : {}", request);
 
+        // TODO: throw specific exception instead of IllegalArgumentException on validations
+
         // Find and validate manager
         UserData manager = userDataRepository.findOne(request.getManagerId());
         Validate.notNull(manager, "Cannot find manager with id=" + request.getManagerId());
@@ -124,11 +127,6 @@ public class ProjectResource {
             .body(result);
     }
 
-    // draft->under development
-    // draft->cancelled
-    // under development->cancelled
-    // under development->finished
-
     @GetMapping("/projects/{id}/start")
     @Timed
     public ResponseEntity<Project> startProject(@PathVariable Long id) {
@@ -148,7 +146,7 @@ public class ProjectResource {
       Project project = projectRepository.findOne(id);
       Validate.notNull(project, "Cannot find project with this id");
       Validate.isTrue(project.getStatus() == ProjectStatus.UNDER_DEVELOPMENT);
-      project.setStatus(ProjectStatus.FINISHED);
+      project.setStatus(ProjectStatus.DONE);
       Project result = projectRepository.save(project);
       return ResponseEntity.ok()
           .headers(HeaderUtil.createEntityUpdateAlert("project", project.getId().toString()))
