@@ -11,6 +11,9 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/**
+ * @author Danilo Valente <danilovalente96@gmail.com>
+ */
 @Service
 public class UserSearchService {
 
@@ -32,7 +35,7 @@ public class UserSearchService {
                                  final Integer maxCostPerHour) {
 
         final Set<String> skillsSet = Optional.ofNullable(skills)
-            .map(s -> s.split("\\s"))
+            .map(s -> s.split("[\\s,]"))
             .map(Arrays::stream)
             .orElseGet(Stream::empty)
             .map(String::toLowerCase)

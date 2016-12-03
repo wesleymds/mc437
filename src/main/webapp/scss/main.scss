@@ -6,6 +6,7 @@ body {
     color: #eee;
 }
 
+
 /* ==========================================================================
 Hide ng-cloak on page load, https://docs.angularjs.org/api/ng/directive/ngCloak
 ========================================================================== */
@@ -456,6 +457,35 @@ md-select .md-select-value.md-select-placeholder{
 
 .table-striped > tbody > tr:nth-of-type(odd) {
     color: #353535;
+}
+
+md-select * {
+    color: #eee!important;
+}
+
+#dev-hour-availability, #dev-max-hour-cost,{
+    color: #eee;
+}
+
+table.md-table th.md-column, {
+    color: #eee;
+}
+
+.dev-search-table thead {
+    background-color: #292929;
+}
+
+table.md-table tbody.md-body > tr.md-row:nth-child(odd){
+    background: #adabab;
+}
+
+table.md-table tbody.md-body > tr.md-row:nth-child(even){
+    background: #696969;
+}
+
+table.md-table.dev-search-table thead tr th, table.md-table.dev-search-table tbody tr td{
+    text-align: center;
+    font-weight: 400;
 }
 
 /* jhipster-needle-scss-add-main JHipster will add new css style */
