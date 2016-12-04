@@ -1,6 +1,9 @@
 package br.com.conpec.sade.web.rest;
 
+import br.com.conpec.sade.domain.Feedback;
+import br.com.conpec.sade.repository.FeedbackRepository;
 import br.com.conpec.sade.service.UserSearchService;
+import br.com.conpec.sade.web.rest.vm.FeedbackVM;
 import br.com.conpec.sade.web.rest.vm.UserSearchResultVM;
 import com.codahale.metrics.annotation.Timed;
 import br.com.conpec.sade.domain.UserData;
@@ -40,6 +43,9 @@ public class UserDataResource {
 
     @Inject
     private UserDataSearchRepository userDataSearchRepository;
+
+    @Inject
+    private FeedbackRepository feedbackRepository;
 
     @Inject
     private UserSearchService userSearchService;
@@ -161,7 +167,7 @@ public class UserDataResource {
         log.debug("Request to search UserData for name {}", name);
         return userSearchService.search(name, skills, available, minAvailableHours, maxCostPerHour)
             .stream()
-            .map(UserSearchResultVM::new)
+            .map(result -> new UserSearchResultVM(result, new FeedbackVM(result.getFeedbacks())))
             .collect(Collectors.toList());
     }
 

@@ -6,6 +6,7 @@ import br.com.conpec.sade.domain.Feedback;
 import br.com.conpec.sade.repository.FeedbackRepository;
 import br.com.conpec.sade.repository.search.FeedbackSearchRepository;
 import br.com.conpec.sade.web.rest.util.HeaderUtil;
+import org.apache.commons.lang3.Validate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
@@ -30,8 +31,12 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 @RequestMapping("/api")
 public class FeedbackResource {
 
+    private static final int MIN_GRADE = 0;
+
+    private static final int MAX_GRADE = 5;
+
     private final Logger log = LoggerFactory.getLogger(FeedbackResource.class);
-        
+
     @Inject
     private FeedbackRepository feedbackRepository;
 
@@ -52,6 +57,18 @@ public class FeedbackResource {
         if (feedback.getId() != null) {
             return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("feedback", "idexists", "A new feedback cannot already have an ID")).body(null);
         }
+
+        Validate.inclusiveBetween(MIN_GRADE, MAX_GRADE, feedback.getCommitment(),
+            "Commitment must be between " + MIN_GRADE + " and " + MAX_GRADE);
+        Validate.inclusiveBetween(MIN_GRADE, MAX_GRADE, feedback.getCommunication(),
+            "Communication must be between " + MIN_GRADE + " and " + MAX_GRADE);
+        Validate.inclusiveBetween(MIN_GRADE, MAX_GRADE, feedback.getPunctuality(),
+            "Punctuality must be between " + MIN_GRADE + " and " + MAX_GRADE);
+        Validate.inclusiveBetween(MIN_GRADE, MAX_GRADE, feedback.getQuality(),
+            "Quality must be between " + MIN_GRADE + " and " + MAX_GRADE);
+        Validate.inclusiveBetween(MIN_GRADE, MAX_GRADE, feedback.getTechnicalKnowledge(),
+            "Technical Knowledge must be between " + MIN_GRADE + " and " + MAX_GRADE);
+
         Feedback result = feedbackRepository.save(feedback);
         feedbackSearchRepository.save(result);
         return ResponseEntity.created(new URI("/api/feedbacks/" + result.getId()))
@@ -75,6 +92,19 @@ public class FeedbackResource {
         if (feedback.getId() == null) {
             return createFeedback(feedback);
         }
+
+
+        Validate.inclusiveBetween(MIN_GRADE, MAX_GRADE, feedback.getCommitment(),
+            "Commitment must be between " + MIN_GRADE + " and " + MAX_GRADE);
+        Validate.inclusiveBetween(MIN_GRADE, MAX_GRADE, feedback.getCommunication(),
+            "Communication must be between " + MIN_GRADE + " and " + MAX_GRADE);
+        Validate.inclusiveBetween(MIN_GRADE, MAX_GRADE, feedback.getPunctuality(),
+            "Punctuality must be between " + MIN_GRADE + " and " + MAX_GRADE);
+        Validate.inclusiveBetween(MIN_GRADE, MAX_GRADE, feedback.getQuality(),
+            "Quality must be between " + MIN_GRADE + " and " + MAX_GRADE);
+        Validate.inclusiveBetween(MIN_GRADE, MAX_GRADE, feedback.getTechnicalKnowledge(),
+            "Technical Knowledge must be between " + MIN_GRADE + " and " + MAX_GRADE);
+
         Feedback result = feedbackRepository.save(feedback);
         feedbackSearchRepository.save(result);
         return ResponseEntity.ok()
@@ -132,7 +162,7 @@ public class FeedbackResource {
      * SEARCH  /_search/feedbacks?query=:query : search for the feedback corresponding
      * to the query.
      *
-     * @param query the query of the feedback search 
+     * @param query the query of the feedback search
      * @return the result of the search
      */
     @GetMapping("/_search/feedbacks")
