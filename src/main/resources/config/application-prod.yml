@@ -42,6 +42,12 @@ spring:
         port: 587
         username: 747d70864199390cadd33a9603b25a78
         password: e43da1f0fb2d69dfb74671721ccc9097
+        protocol: smtp
+        tls: true
+        properties.mail.smtp:
+            auth: true
+            starttls.enable: true
+            ssl.trust: in-v3.mailjet.com
     thymeleaf:
         cache: true
 
