@@ -1,54 +1,47 @@
 <div>
-    <h2>{{vm.data.user.firstName}} {{vm.data.user.lastName}}</h2>
-    <dl class="dl-horizontal">
-        <dt><span>Login</span></dt>
-        <dd><span>{{vm.data.user.login}}</span></dd>
-        <dt><span>Nome</span></dt>
-        <dd>{{vm.data.user.firstName}}</dd>
-        <dt><span>Sobrenome</span></dt>
-        <dd>{{vm.data.user.lastName}}</dd>
-        <dt><span>E-mail</span></dt>
-        <dd>{{vm.data.user.email}}</dd>
-        <dt><span>Ativo</span></dt>
-        <dd ng-if="vm.data.activated">Sim</dd>
-        <dd ng-if="!vm.data.activated">Não</dd>
-        <!--<dt><span>Created By</span></dt>-->
-        <!--<dd>{{vm.user.createdBy}}</dd>-->
-        <!--<dt><span>Created Date</span></dt>-->
-        <!--<dd>{{vm.user.createdDate | date:'dd/MM/yy HH:mm' }}</dd>-->
-        <!--<dt><span>Last Modified By</span></dt>-->
-        <!--<dd>{{vm.user.lastModifiedBy}}</dd>-->
-        <!--<dt><span>Last Modified Date</span></dt>-->
-        <!--<dd>{{vm.user.lastModifiedDate | date:'dd/MM/yy HH:mm'}}</dd>-->
-        <!--<dt><span>Profiles</span></dt>-->
-        <!--<dd>-->
-            <!--<ul class="list-unstyled">-->
-                <!--<li ng-repeat="authority in vm.user.authorities"><span>{{authority}}</span></li>-->
-            <!--</ul>-->
-        <!--</dd>-->
-        <dt><span>Endereço</span></dt>
-        <dd>{{vm.data.address}}</dd>
-        <dt><span>Disponível</span></dt>
-        <dd ng-if="vm.data.available">Sim</dd>
-        <dd ng-if="!vm.data.available">Não</dd>
-        <dt><span>Horas disponíveis por semana</span></dt>
-        <dd>{{vm.data.availableHoursPerWeek}} horas</dd>
-        <dt><span>Conta corrente</span></dt>
-        <dd>{{vm.data.bankAccount}}</dd>
-        <dt><span>Agência</span></dt>
-        <dd>{{vm.data.bankAgency}}</dd>
-        <dt><span>CPF</span></dt>
-        <dd>{{vm.data.cpf}}</dd>
-        <dt><span>Custo inicial por hora</span></dt>
-        <dd>R${{vm.data.initialCostPerHour}},00</dd>
-        <dt><span>Telefone</span></dt>
-        <dd>{{vm.data.primaryPhoneNumber}}</dd>
-        <dt><span>RG</span></dt>
-        <dd>{{vm.data.secondaryPhoneNumber}}</dd>
-    </dl>
-    <button type="submit"
-            ui-sref="user-profile"
-            class="btn btn-info">
-        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
-    </button>
+    <div class="col-xs-12">
+        <div class = "col-md-4 col-md-offset-4">
+            <img src="http://informebaiano.com.br/wp-content/uploads/neymar-says-watch-red-bull-street-style-on-red-bull-tv.jpg"
+                 class="img-responsive dev-avatar"
+            />
+        </div>
+    </div>
+    <div class = "text-center col-xs-12">
+        <h2>{{vm.data.user.firstName}} {{vm.data.user.lastName}}</h2>
+    </div>
+    <div class = "col-md-2 col-md-offset-3 text-center dev-status">
+        <span ng-if="vm.data.activated" class="ok-status">Ativo</span>
+        <span ng-if="!vm.data.activated" class="bad-status">Inativo</span>
+    </div>
+    <div class = "col-md-2 col-md-offset-2 text-center dev-status">
+        <span ng-if="vm.data.available" class="ok-status">Disponível</span>
+        <span ng-if="!vm.data.available" class="bad-status">Indisponível</span>
+    </div>
+    <div class = "col-xs-12 col-md-8 col-md-offset-2" style="margin-top:50px;">
+        <dl class="dl-horizontal">
+            <dt><span>E-mail</span></dt>
+            <dd>{{vm.data.user.email}}</dd>
+            <dt><span>Endereço</span></dt>
+            <dd>{{vm.data.address}}</dd>
+            <dt><span>Horas disponíveis por semana</span></dt>
+            <dd>{{vm.data.availableHoursPerWeek}} horas</dd>
+            <dt><span>Conta corrente</span></dt>
+            <dd>{{vm.data.bankAccount}}</dd>
+            <dt><span>Agência</span></dt>
+            <dd>{{vm.data.bankAgency}}</dd>
+            <dt><span>CPF</span></dt>
+            <dd>{{vm.data.cpf}}</dd>
+            <dt><span>Custo inicial por hora</span></dt>
+            <dd>R${{vm.data.initialCostPerHour}},00</dd>
+            <dt><span>Telefone</span></dt>
+            <dd>{{vm.data.primaryPhoneNumber}}</dd>
+            <dt><span>RG</span></dt>
+            <dd>{{vm.data.secondaryPhoneNumber}}</dd>
+        </dl>
+        <button type="submit"
+                ui-sref="user-profile"
+                class="btn btn-info">
+            <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+        </button>
+    </div>
 </div>
