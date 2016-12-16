@@ -75,9 +75,9 @@ public class FeedbackResource {
 
         final User user = userRepository.findOneByLogin(SecurityUtils.getCurrentUserLogin()).get();
         final UserData author = userDataRepository.findAll().stream()
-            .filter(Predicate.isEqual(user.getId()))
+            .filter(ud -> user.getId().equals(ud.getUser().getId()))
             .findFirst()
-            .get();
+            .orElse(null);
 
         final UserData developer = userDataRepository.findOne(request.getDeveloperId());
 
