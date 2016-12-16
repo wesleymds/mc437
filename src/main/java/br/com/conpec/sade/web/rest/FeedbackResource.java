@@ -1,5 +1,13 @@
 package br.com.conpec.sade.web.rest;
 
+import br.com.conpec.sade.domain.Project;
+import br.com.conpec.sade.domain.User;
+import br.com.conpec.sade.domain.UserData;
+import br.com.conpec.sade.repository.ProjectRepository;
+import br.com.conpec.sade.repository.UserDataRepository;
+import br.com.conpec.sade.repository.UserRepository;
+import br.com.conpec.sade.security.SecurityUtils;
+import br.com.conpec.sade.web.rest.request.CreateFeedbackRequest;
 import com.codahale.metrics.annotation.Timed;
 import br.com.conpec.sade.domain.Feedback;
 
@@ -19,6 +27,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -43,31 +52,47 @@ public class FeedbackResource {
     @Inject
     private FeedbackSearchRepository feedbackSearchRepository;
 
+    @Inject
+    private UserRepository userRepository;
+
+    @Inject
+    private UserDataRepository userDataRepository;
+
+    @Inject
+    private ProjectRepository projectRepository;
+
     /**
      * POST  /feedbacks : Create a new feedback.
      *
-     * @param feedback the feedback to create
+     * @param request the feedback to create
      * @return the ResponseEntity with status 201 (Created) and with body the new feedback, or with status 400 (Bad Request) if the feedback has already an ID
      * @throws URISyntaxException if the Location URI syntax is incorrect
      */
     @PostMapping("/feedbacks")
     @Timed
-    public ResponseEntity<Feedback> createFeedback(@RequestBody Feedback feedback) throws URISyntaxException {
-        log.debug("REST request to save Feedback : {}", feedback);
-        if (feedback.getId() != null) {
-            return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("feedback", "idexists", "A new feedback cannot already have an ID")).body(null);
-        }
+    public ResponseEntity<Feedback> createFeedback(@RequestBody CreateFeedbackRequest request) throws URISyntaxException {
+        log.debug("REST request to save Feedback : {}", request);
 
-        Validate.inclusiveBetween(MIN_GRADE, MAX_GRADE, feedback.getCommitment(),
-            "Commitment must be between " + MIN_GRADE + " and " + MAX_GRADE);
-        Validate.inclusiveBetween(MIN_GRADE, MAX_GRADE, feedback.getCommunication(),
-            "Communication must be between " + MIN_GRADE + " and " + MAX_GRADE);
-        Validate.inclusiveBetween(MIN_GRADE, MAX_GRADE, feedback.getPunctuality(),
-            "Punctuality must be between " + MIN_GRADE + " and " + MAX_GRADE);
-        Validate.inclusiveBetween(MIN_GRADE, MAX_GRADE, feedback.getQuality(),
-            "Quality must be between " + MIN_GRADE + " and " + MAX_GRADE);
-        Validate.inclusiveBetween(MIN_GRADE, MAX_GRADE, feedback.getTechnicalKnowledge(),
-            "Technical Knowledge must be between " + MIN_GRADE + " and " + MAX_GRADE);
+        final User user = userRepository.findOneByLogin(SecurityUtils.getCurrentUserLogin()).get();
+        final UserData author = userDataRepository.findAll().stream()
+            .filter(Predicate.isEqual(user.getId()))
+            .findFirst()
+            .get();
+
+        final UserData developer = userDataRepository.findOne(request.getDeveloperId());
+
+        final Project project = projectRepository.findOne(request.getProjectId());
+
+        Feedback feedback = new Feedback();
+        feedback.setProject(project);
+        feedback.setAuthor(author);
+        feedback.setDeveloper(developer);
+        feedback.setCommitment(request.getCommitment());
+        feedback.setCommunication(request.getCommunication());
+        feedback.setPunctuality(request.getPunctuality());
+        feedback.setQuality(request.getQuality());
+        feedback.setTechnicalKnowledge(request.getTechnicalKnowledge());
+        feedback.setExtra(request.getExtra());
 
         Feedback result = feedbackRepository.save(feedback);
         feedbackSearchRepository.save(result);
@@ -89,10 +114,6 @@ public class FeedbackResource {
     @Timed
     public ResponseEntity<Feedback> updateFeedback(@RequestBody Feedback feedback) throws URISyntaxException {
         log.debug("REST request to update Feedback : {}", feedback);
-        if (feedback.getId() == null) {
-            return createFeedback(feedback);
-        }
-
 
         Validate.inclusiveBetween(MIN_GRADE, MAX_GRADE, feedback.getCommitment(),
             "Commitment must be between " + MIN_GRADE + " and " + MAX_GRADE);
