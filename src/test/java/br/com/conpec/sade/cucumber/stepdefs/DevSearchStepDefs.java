@@ -39,8 +39,8 @@ public class DevSearchStepDefs extends StepDefs {
     public void iAmLoggedInAsAnAdmin() throws Throwable {
         webDriver.findElement(By.id("account-menu")).click();
         webDriver.findElement(By.id("login")).click();
-        webDriver.findElement(By.id("username")).sendKeys("admin");
-        webDriver.findElement(By.id("password")).sendKeys("admin");
+        webDriver.findElement(By.id("username")).sendKeys("user");
+        webDriver.findElement(By.id("password")).sendKeys("user");
         webDriver.findElement(By.id("loginButton")).click();
 
     }
