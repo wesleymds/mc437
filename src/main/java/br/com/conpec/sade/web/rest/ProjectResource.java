@@ -1,6 +1,7 @@
 package br.com.conpec.sade.web.rest;
 
 import br.com.conpec.sade.domain.*;
+import br.com.conpec.sade.domain.enumeration.ProjectStatus;
 import br.com.conpec.sade.repository.ExternalResourceRepository;
 import br.com.conpec.sade.repository.UserDataRepository;
 import br.com.conpec.sade.security.AuthoritiesConstants;
@@ -64,6 +65,8 @@ public class ProjectResource {
     public ResponseEntity<Project> createProject(@Valid @RequestBody CreateProjectRequest request) throws URISyntaxException {
         log.debug("REST request to save Project : {}", request);
 
+        // TODO: throw specific exception instead of IllegalArgumentException on validations
+
         // Find and validate manager
         UserData manager = userDataRepository.findOne(request.getManagerId());
         Validate.notNull(manager, "Cannot find manager with id=" + request.getManagerId());
@@ -89,6 +92,7 @@ public class ProjectResource {
         project.setDevelopers(developers);
         project.setAssessors(assessors);
         project.setManager(manager);
+        project.setStatus(ProjectStatus.DRAFT);
 
         // Save project on DB
         Project result = projectRepository.save(project);
@@ -123,19 +127,43 @@ public class ProjectResource {
             .body(result);
     }
 
-    public ResponseEntity<Project> startProject() {
-        // TODO
-        return null;
+    @GetMapping("/projects/{id}/start")
+    @Timed
+    public ResponseEntity<Project> startProject(@PathVariable Long id) {
+      Project project = projectRepository.findOne(id);
+      Validate.notNull(project, "Cannot find project with this id");
+      Validate.isTrue(project.getStatus() == ProjectStatus.DRAFT);
+      project.setStatus(ProjectStatus.UNDER_DEVELOPMENT);
+      Project result = projectRepository.save(project);
+      return ResponseEntity.ok()
+          .headers(HeaderUtil.createEntityUpdateAlert("project", project.getId().toString()))
+          .body(result);
     }
 
-    public ResponseEntity<Project> finishProject() {
-        // TODO
-        return null;
+    @GetMapping("/projects/{id}/finish")
+    @Timed
+    public ResponseEntity<Project> finishProject(@PathVariable Long id) {
+      Project project = projectRepository.findOne(id);
+      Validate.notNull(project, "Cannot find project with this id");
+      Validate.isTrue(project.getStatus() == ProjectStatus.UNDER_DEVELOPMENT);
+      project.setStatus(ProjectStatus.DONE);
+      Project result = projectRepository.save(project);
+      return ResponseEntity.ok()
+          .headers(HeaderUtil.createEntityUpdateAlert("project", project.getId().toString()))
+          .body(result);
     }
 
-    public ResponseEntity<Project> cancelProject() {
-        // TODO
-        return null;
+    @GetMapping("/projects/{id}/cancel")
+    @Timed
+    public ResponseEntity<Project> cancelProject(@PathVariable Long id) {
+      Project project = projectRepository.findOne(id);
+      Validate.notNull(project, "Cannot find project with this id");
+      Validate.isTrue(project.getStatus() == ProjectStatus.DRAFT || project.getStatus() == ProjectStatus.UNDER_DEVELOPMENT);
+      project.setStatus(ProjectStatus.CANCELLED);
+      Project result = projectRepository.save(project);
+      return ResponseEntity.ok()
+          .headers(HeaderUtil.createEntityUpdateAlert("project", project.getId().toString()))
+          .body(result);
     }
 
     /**

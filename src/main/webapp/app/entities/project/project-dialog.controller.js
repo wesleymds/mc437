@@ -30,7 +30,15 @@
             if (vm.project.id !== null) {
                 Project.update(vm.project, onSaveSuccess, onSaveError);
             } else {
-                Project.save(vm.project, onSaveSuccess, onSaveError);
+                var createdProject = {
+                    name: vm.project.name,
+                    resources: [],  // TODO
+                    assessorsIds: vm.project.assessors.map(function (assessor) { return assessor.id; }),
+                    developersIds: vm.project.developers.map(function (developer) { return developer.id; }),
+                    managerId: vm.project.manager.id
+                };
+
+                Project.save(createdProject, onSaveSuccess, onSaveError);
             }
         }
 
