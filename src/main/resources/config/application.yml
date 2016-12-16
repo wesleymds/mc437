@@ -83,7 +83,7 @@ jhipster:
         #allow-credentials: true
         #max-age: 1800
     mail:
-        from: mc437@localhost
+        from: hernando.sas@gmail.com
     swagger:
         title: mc437 API
         description: mc437 API documentation

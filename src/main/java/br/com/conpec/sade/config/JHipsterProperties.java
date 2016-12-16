@@ -152,7 +152,7 @@ public class JHipsterProperties {
 
     public static class Mail {
 
-        private String from = "mc437@localhost";
+        private String from = "hernando.sas@gmail.com";
 
         public String getFrom() {
             return from;
