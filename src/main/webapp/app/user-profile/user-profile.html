@@ -9,11 +9,14 @@
     <div class = "text-center col-xs-12">
         <h2>{{vm.data.user.firstName}} {{vm.data.user.lastName}}</h2>
     </div>
-    <div class = "col-md-2 col-md-offset-3 text-center dev-status">
+    <div class = "col-md-2 col-md-offset-2 text-center dev-status">
         <span ng-if="vm.data.activated" class="ok-status">Ativo</span>
         <span ng-if="!vm.data.activated" class="bad-status">Inativo</span>
     </div>
-    <div class = "col-md-2 col-md-offset-2 text-center dev-status">
+    <div class = "col-md-2 col-md-offset-1 text-center dev-status">
+         <button type="submit" class="btn btn-default" data-toggle="modal" data-target="#evaluate-modal">Avaliar</button>
+    </div>
+    <div class = "col-md-2 col-md-offset-1 text-center dev-status">
         <span ng-if="vm.data.available" class="ok-status">Disponível</span>
         <span ng-if="!vm.data.available" class="bad-status">Indisponível</span>
     </div>
@@ -37,11 +40,103 @@
             <dd>{{vm.data.primaryPhoneNumber}}</dd>
             <dt><span>RG</span></dt>
             <dd>{{vm.data.secondaryPhoneNumber}}</dd>
+            <dt><span>Skills</span></dt>
+            <dd>
+                <span ng-repeat="skill in vm.data.skills" ng-class="{'unverified-skill' : !skill.verified}">
+                    {{skill.name}},
+                </span>
+            </dd>
         </dl>
-        <button type="submit"
-                ui-sref="user-profile"
-                class="btn btn-info">
-            <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
-        </button>
     </div>
+</div>
+
+
+<div id="evaluate-modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Avaliar desenvolvedor {{vm.data.user.firstName}} </h4>
+      </div>
+      <div class="modal-body">
+       <div class = "row">
+        <div class="col-xs-12">
+            <label>Projeto</label>
+            <select placeholder="Avaliar" ng-model="vm.evaluation.projectId">
+                <option ng-repeat="project in vm.projects" value="{{project.id}}">{{project.name}}</option>
+            </select>
+        </div>
+        <div class="col-xs-12">
+            <label>Comprometimento</label>
+            <md-slider-container>
+              <md-slider ng-model="vm.evaluation.commitment" min="1" max="5" aria-label="blue" id="hour-slider" class="md-primary col-xs-8">
+              </md-slider>
+              <md-input-container>
+                <input flex  id="dev-hour-availability" aria-label="blue" disabled ng-model="vm.evaluation.commitment" >
+              </md-input-container>
+            </md-slider-container>
+        </div>
+        <div class="col-xs-12">
+            <label>Comunicação</label>
+            <md-slider-container>
+              <md-slider ng-model="vm.evaluation.communication" min="1" max="5" aria-label="blue" id="hour-slider" class="md-primary col-xs-8">
+              </md-slider>
+              <md-input-container>
+                <input flex  id="dev-hour-availability" aria-label="blue" disabled ng-model="vm.evaluation.communication" >
+              </md-input-container>
+            </md-slider-container>
+        </div>
+        <div class="col-xs-12">
+            <label>Pontualidade</label>
+            <md-slider-container>
+              <md-slider ng-model="vm.evaluation.punctuality" min="1" max="5" aria-label="blue" id="hour-slider" class="md-primary col-xs-8">
+              </md-slider>
+              <md-input-container>
+                <input flex  id="dev-hour-availability" aria-label="blue" disabled ng-model="vm.evaluation.punctuality" >
+              </md-input-container>
+            </md-slider-container>
+        </div>
+        <div class="col-xs-12">
+            <label>Qualidade</label>
+            <md-slider-container>
+              <md-slider ng-model="vm.evaluation.quality" min="1" max="5" aria-label="blue" id="hour-slider" class="md-primary col-xs-8">
+              </md-slider>
+              <md-input-container>
+                <input flex  id="dev-hour-availability" disabled ng-model="vm.evaluation.quality" >
+              </md-input-container>
+            </md-slider-container>
+        </div>
+        <div class="col-xs-12">
+            <label>Conhecimento técnico</label>
+            <md-slider-container>
+              <md-slider ng-model="vm.evaluation.technicalKnowledge" min="1" max="5" aria-label="blue" id="hour-slider" class="md-primary col-xs-8">
+              </md-slider>
+              <md-input-container>
+                <input flex  id="dev-hour-availability" aria-label="blue" disabled ng-model="vm.evaluation.technicalKnowledge" >
+              </md-input-container>
+            </md-slider-container>
+        </div>
+        </div>      
+      </div>
+      <div class="modal-footer">
+        <button type="button" ng-click="vm.evaluateUser()" class="btn btn-default" >Enviar</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="success-modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Usuário avaliado com sucesso.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+
+  </div>
 </div>

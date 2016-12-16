@@ -58,12 +58,12 @@
 			      </tr>
 			    </thead>
 			    <tbody md-body>
-			      <tr md-row md-select-id="name" md-auto-select  ng-repeat="result in vm.result" ng-show="vm.result">
-			        <td md-cell>{{result.name}}</td>
-			        <td md-cell>{{result.email}}</td>
-			        <td md-cell>{{result.availableHoursPerWeek}}</td>
-			        <td md-cell>{{result.initialCostPerHour}}</td>
-			        <td md-cell>{{result.skills}}</td>
+			      <tr md-row md-select-id="name" md-auto-select ng-repeat="result in vm.result" ng-show="vm.result" ui-sref="user-profile({id: result.userDataId})">
+			        	<td md-cell>{{result.name}}</td>
+			        	<td md-cell>{{result.email}}</td>
+			        	<td md-cell>{{result.availableHoursPerWeek}}</td>
+			        	<td md-cell>{{result.initialCostPerHour}}</td>
+			       	    <td md-cell>{{result.skills}}</td>
 			      </tr>
 			    </tbody>
 			  </table>

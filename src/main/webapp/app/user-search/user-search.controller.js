@@ -42,7 +42,6 @@
         });
 
         $scope.searchDevs = function () {
-            console.log('chamei a funcao');
             UserSearch.search(vm.searchQuery).then(function (response) {
                 console.log(vm.searchQuery);
                 console.log(response);

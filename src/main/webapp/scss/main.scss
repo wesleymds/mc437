@@ -488,6 +488,15 @@ table.md-table.dev-search-table thead tr th, table.md-table.dev-search-table tbo
     font-weight: 400;
 }
 
+table.md-table.dev-search-table thead tr th, table.md-table.dev-search-table tbody tr{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+table.md-table.dev-search-table thead tr th, table.md-table.dev-search-table tbody tr:hover{
+    opacity: 0.6;
+}
+
 .dev-avatar {
     border: 3px solid rgba(255, 255, 255, 0.6);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -504,3 +513,11 @@ table.md-table.dev-search-table thead tr th, table.md-table.dev-search-table tbo
     background: red;
 }
 /* jhipster-needle-scss-add-main JHipster will add new css style */
+
+.unverified-skill {
+    opacity: 0.4;
+}
+
+#evaluate-modal * , #success-modal * {
+    color: #353535;
+}
