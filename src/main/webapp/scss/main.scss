@@ -430,7 +430,7 @@ h1.dev-search-title {
     margin: 30px 0;
 }
 
-@media (max-width: 768px) 
+@media (max-width: 768px)
 {
   .orange-search-btn {
     margin-top: 30px;
@@ -488,4 +488,19 @@ table.md-table.dev-search-table thead tr th, table.md-table.dev-search-table tbo
     font-weight: 400;
 }
 
+.dev-avatar {
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.dev-status span{
+    padding: 10px 20px;
+}
+
+.ok-status {
+    background: green;
+}
+.bad-status {
+    background: red;
+}
 /* jhipster-needle-scss-add-main JHipster will add new css style */
